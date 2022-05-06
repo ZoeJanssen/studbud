@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workspace</title>
+</head>
+<body>
+
+<!-- start of nav bar -->
+<nav>
+  
+    <div class ="container">
+    <h1> StudBud</h1>
+    <div class = "menu">
+      <a href = "#">My Profile</a>  
+      <a href = "#">My Workspace</a>
+      <a href = "#">My Tasks</a>
+      <a href = "#">My Resources</a>
+    </div>
+    
+    <button class = "hamburger">
+      <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+      </nav>
+    <!--   end of nav bar -->
+      
+    <!--   start of the card layout -->
+    
+      
+      <div class = "wrapper">
+        <div class = "header"> DECO2016 
+           <a href = "#">Normal</a>  
+            <a href = "#">Space 🚀</a>
+            <a href = "#">Forest 🌱</a>
+          <a href = "#">Beach 🏝</a>
+          
+        </div>
+        
+        <div class = "cards_wrap">
+    
+    <!--       Task List feature  -->
+          <div class = "card_item">
+            <div class = "card_inner">
+              <div class = "feature_name"> <h2>Task List</h2> </div>
+              <div class = "inclusion"> 
+                
+                  <form id="taskform" >
+                  <label for= "task"> Task: </label>
+                  <input type= "text" name= "task" id="taskInput">
+                  <!--   form setup -->
+                  <!-- model view container, single source of truth - array, which can be displayed in                         many ways such as poulating notifications or displaying on screen. -->
+        
+                  <br>
+                 <!--Date input -->
+                  <label for= "dueDate">Due Date: </label>
+                  <input type= "date" name="dueDate" id="dueDateInput" >
+                  <br>
+        
+                  <!--Timee input -->
+                  <label for= "completionTime">Completion Time: </label>
+                  <input type= "time" name="completionTime" id="completionTimeInput" >
+    
+                  <br>
+                  <label for = "estimatedTime">Estimated Task Length (in mins): </label>
+                  <input type= "number" name="estimatedTime" id="estimatedTimeInput">
+        
+                  <!--Priority -->
+                  <br>
+    
+                  <label for = "priority">Task Priority: </label>
+                  <select name="priority" id="priorityInput">
+                  <option value ="">Select One</option>
+                  <option value= "low">Low</option>
+                  <option value= "medium">Medium</option>
+                  <option value= "High">High</option>
+                  </select>
+    
+                   <br>
+        
+                  <button type= "submit">Submit</button>
+                  </form>
+    
+               
+                  <p id= "emptylist"> You have not added any tasks yet </p>
+                  <ul id= "tasklist">
+                  </ul>
+    
+              </div>
+            </div>
+          </div>
+    
+    <!--       Stop watch feature  -->
+    <!--       (Tyler potts, 2022) -->
+          <div class = "card_item">
+            <div class = "card_inner">
+              <div class "feature_name"> <h2>Stopwatch</h2></div>
+                <div class = "inclusion"> 
+                  <div class="watch">
+                        <div class="time">00:00:00</div>
+                          <div class="controls">
+                            <button id="start">Start</button>
+                            <button id="stop">Stop</button>
+                            <button id="reset">Reset</button>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+    
+    <!--       Music Player feature  -->
+          <div class = "card_item">
+            <div class = "card_inner">
+              <div class "feature_name"> <h2>Music Player</h2></div>
+                <div class = "inclusion"> 
+               <iframe src="https://open.spotify.com/embed/playlist/471N195f5jAVs086lzYglw" width="100%" height="200" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe> 
+              </div>
+            </div>
+          </div>
+    
+     <!--       flow time feature  -->
+          <div class = "card_item">
+            <div class = "card_inner">
+              <div class "feature_name"> Flow Time</div>
+                <div class = "inclusion"> 
+                <p> flow time list will go here</p>
+              </div>
+            </div>
+          </div>
+    
+     <!--       inspiration generator feature  -->
+          <div class = "card_item">
+            <div class = "card_inner">
+              <div class "feature_name"> <h2>Inspiration Generator</h2> </div>
+                <div class = "inclusion"> 
+                     <img src="https://source.unsplash.com/random/370x225" alt="">
+                  <button id = "generate"> Generate Image </button>
+                  <button id = "resource list"> Add to Resource List </button>
+              </div>
+            </div>
+          </div>
+    
+    <!--       Assignment list feature  -->     
+          <div class = "card_item">
+            <div class = "card_inner">
+                <div class = "inclusion"> 
+                  <div class="container-2">
+                    <h2>Assignment List</h2>
+                      <form class="todo-form">
+                        <input type="text" class="todo-input" placeholder="Add an Assignment">
+                          <button type="submit" class="add-button">Add</button>
+                            </form>
+                              <ul class="todo-items">
+                              <!-- dummy item -->
+                                <li class="item" data-key="1594003133171">
+                                  <input class="checkbox" type="checkbox"> Assignment A1: Exam
+                                    <button class="delete-button"> X </button>
+                                </li>
+                              </ul>
+                             </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      
+    <!-- end of the card layout  -->
+
+
+<script src="workspace.js"></script>    
+</body>
+</html>
