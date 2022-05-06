@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workspace</title>
+    <link rel="stylesheet" href="styles/workspace.scss" >
 </head>
 <body>
 
@@ -14,8 +15,8 @@
     <div class ="container">
     <h1> StudBud</h1>
     <div class = "menu">
-      <a href = "#">My Profile</a>  
-      <a href = "#">My Workspace</a>
+        <a href="index.html">My Profile</a>
+        <a href = "workspace.html">My Workspace</a>
       <a href = "#">My Tasks</a>
       <a href = "#">My Resources</a>
     </div>
@@ -41,15 +42,18 @@
           <a href = "#">Beach 🏝</a>
           
         </div>
-        
         <div class = "cards_wrap">
     
     <!--       Task List feature  -->
           <div class = "card_item">
             <div class = "card_inner">
               <div class = "feature_name"> <h2>Task List</h2> </div>
-              <div class = "inclusion"> 
-                
+              <div class = "inclusion">
+                <div class="center"> 
+                    <label for="show" class="show-btn">Add Task</label>
+                    <input type="checkbox" id="show">
+                    <label for ="show" class="close-btn"></label>
+
                   <form id="taskform" >
                   <label for= "task"> Task: </label>
                   <input type= "text" name= "task" id="taskInput">
@@ -94,7 +98,7 @@
               </div>
             </div>
           </div>
-    
+        </div>
     <!--       Stop watch feature  -->
     <!--       (Tyler potts, 2022) -->
           <div class = "card_item">
@@ -172,6 +176,8 @@
     <!-- end of the card layout  -->
      
       
-<script src="workspace.js"></script>    
+<script src="workspace.js"></script>   
+<script src="tasks.js"></script>
+
 </body>
 </html>
