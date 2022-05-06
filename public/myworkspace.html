@@ -16,7 +16,7 @@
     <h1> StudBud</h1>
     <div class = "menu">
         <a href="index.html">My Profile</a>
-        <a href = "workspace.html">My Workspace</a>
+        <a href = "myworkspace.html">My Workspace</a>
         <a href = "mytasks.html">My Tasks</a>
         <a href = "myresources.html">My Resources</a>
     </div>
@@ -43,63 +43,60 @@
           
         </div>
         <div class = "cards_wrap">
-    
-    <!--       Task List feature  -->
-          <div class = "card_item">
-            <div class = "card_inner">
-              <div class = "feature_name"> <h2>Task List</h2> </div>
-              <div class = "inclusion">
-                <div class="center">
-                <input type="checkbox" id="show">
-                    <label for="show" class="show-btn">View Form</label>
-                    <div class="tasklistContainer">
-                       <label for="show" class="close-btn fas fa-times" title="close"></label>
-                  <form id="taskform" >
-                  <label for= "task"> Task: </label>
-                  <input type= "text" name= "task" id="taskInput">
-                  <!--   form setup -->
-                  <!-- model view container, single source of truth - array, which can be displayed in                         many ways such as poulating notifications or displaying on screen. -->
-        
-                  <br>
-                 <!--Date input -->
-                  <label for= "dueDate">Due Date: </label>
-                  <input type= "date" name="dueDate" id="dueDateInput" >
-                  <br>
-        
-                  <!--Timee input -->
-                  <label for= "completionTime">Completion Time: </label>
-                  <input type= "time" name="completionTime" id="completionTimeInput" >
-    
-                  <br>
-                  <label for = "estimatedTime">Estimated Task Length (in mins): </label>
-                  <input type= "number" name="estimatedTime" id="estimatedTimeInput">
-        
-                  <!--Priority -->
-                  <br>
-    
-                  <label for = "priority">Task Priority: </label>
-                  <select name="priority" id="priorityInput">
-                  <option value ="">Select One</option>
-                  <option value= "low">Low</option>
-                  <option value= "medium">Medium</option>
-                  <option value= "High">High</option>
-                  </select>
-    
-                   <br>
-        
-                  <button type= "submit">Submit</button>
-                  </form>
-    
+
+
+      
+          <!--       Task List feature  -->
+                <div class = "card_item">
+                  <div class = "card_inner">
+          
+          <div class="form-popup" id="myForm">
+            <form class="form-container">
+          
+              <h1>Task List</h1>
+          
+               <label for= "task"> Task: </label>
+               <input type= "text" name= "task" id="taskInput">
                
-                  <p id= "emptylist"> You have not added any tasks yet </p>
-                  <ul id= "tasklist">
-                  </ul>
-    
-              </div>
-            </div>
+          
+                       <!--Date input -->
+                <label for= "dueDate">Due Date: </label>
+                <input type= "date" name="dueDate" id="dueDateInput" >
+              
+                        <!--Timee input -->
+                <label for= "completionTime">Completion Time: </label>
+                <input type= "time" name="completionTime" id="completionTimeInput" >
+          
+                        <br>
+                        <label for = "estimatedTime">Estimated Task Length (in mins): </label>
+                        <input type= "number" name="estimatedTime" id="estimatedTimeInput">
+              
+                        <!--Priority -->
+                        <br>
+          
+                        <label for = "priority">Task Priority: </label>
+                        
+                        <select name="priority" id="priorityInput">
+                        <option value ="">Select One</option>
+                        <option value= "low">Low</option>
+                        <option value= "medium">Medium</option>
+                        <option value= "High">High</option>
+                        </select>
+          
+                         <br>
+              
+          
+          
+              <button type="submit" class="submit">Add Task</button>
+                   <button type="submit">Submit</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">Disregard</button>
+            </form> 
+          </form>
+          
           </div>
-        </div>
-    </div>
+          
+                    </div>
+                  </div>
     <!--       Stop watch feature  -->
     <!--       (Tyler potts, 2022) -->
           <div class = "card_item">
