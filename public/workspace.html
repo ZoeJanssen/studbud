@@ -17,8 +17,8 @@
     <div class = "menu">
         <a href="index.html">My Profile</a>
         <a href = "workspace.html">My Workspace</a>
-      <a href = "#">My Tasks</a>
-      <a href = "#">My Resources</a>
+        <a href = "mytasks.html">My Tasks</a>
+        <a href = "myresources.html">My Resources</a>
     </div>
     
     <button class = "hamburger">
@@ -49,11 +49,11 @@
             <div class = "card_inner">
               <div class = "feature_name"> <h2>Task List</h2> </div>
               <div class = "inclusion">
-                <div class="center"> 
-                    <label for="show" class="show-btn">Add Task</label>
-                    <input type="checkbox" id="show">
-                    <label for ="show" class="close-btn"></label>
-
+                <div class="center">
+                <input type="checkbox" id="show">
+                    <label for="show" class="show-btn">View Form</label>
+                    <div class="tasklistContainer">
+                       <label for="show" class="close-btn fas fa-times" title="close"></label>
                   <form id="taskform" >
                   <label for= "task"> Task: </label>
                   <input type= "text" name= "task" id="taskInput">
@@ -99,6 +99,7 @@
             </div>
           </div>
         </div>
+    </div>
     <!--       Stop watch feature  -->
     <!--       (Tyler potts, 2022) -->
           <div class = "card_item">
