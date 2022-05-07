@@ -1,245 +1,57 @@
-html, body {
-    width: 100%;
-    height: 100%;
-    background: #eeeff4;
-    
+/* Add a black background color to the top navigation */
+.myMenu {
+  background-color: #333;
+  overflow: hidden;
+}
 
-  
-  }
-  
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;900&display=swap');
-  
-  *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Noto Sans JP', sans-serif;
-  
-  }
-  
-  h1{
-    color: #fff;
-    font-size: 28px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-  
-  h2{
-    color: #000;
-    font-size: 24px;
-    font-weight: 900;
-  }
-  
-  
-  
-  
-  
-  /* button css */
-  button{
-    background-color: #426ACF;
-    color: #fff;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    padding: 7px;
-    font-size: 1rem;
-  }
-  
-  button:hover {
-    cursor: pointer;
-    background-color: #4ECDC4;
-  }
-  
-  /* end of button css */
-  
-  /* start of navbar CSS */
-  
-  
-  .navbar{
-  /*   my screen size is larger than 1080 px so it will start for a 15 inch laptop */
-    max-width: 1790px;
-    margin: 0;
-  
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  nav{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 99;
-    background-color: #426ACF;
-    padding: 16px 32px;
-    border-bottom: 3px; 
-  }
-  
-  .hamburger{
+/* Style the links inside the navigation bar */
+.myMenu a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.myMenu a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.myMenu a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Hide the link that should open and close the myMenu on small screens */
+.myMenu .icon {
+  display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the myMenu (.icon) */
+@media screen and (max-width: 600px) {
+  .myMenu a:not(:first-child) {display: none;}
+  .myMenu a.icon {
+    float: right;
     display: block;
-    position: relative;
-    z-index: 1;
-    user-select: none;
-    appearance: none;
-    border: none;
-    outline: none;
-    background: none;
-    cursor: pointer;
   }
-  
-  /* the three lines in hamburger menu */
-  .hamburger span{
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
-    background-color: #fff;
-    border-radius: 6px;
-    z-index: 1;
-    transform-origin: 0 0;
-    transition: 0.4s;
-  }
-  
-  .hamburger:hover span:nth-child(2){
-    transform: translateX(10px);
-    background-color: #FF6B6B;
-  }
-  
-  .hamburger.is-active:hover span{
-    background-color: #FF6B6B;
-  }
-  
-  .menu{
-    display: none;
-    flex: 1 1 0%;
-    justify-content: flex-end;
-    margin: 0 -16px;
-    
-  }
-  
-  .menu a{
-    color: #fff;
-    margin: 0 16px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.4s;
-    padding: 8px 16px;
-    border-radius: 99px;
-  }
-  
-  .menu a.is-active, .menu a:hover{
-    background-color: #FF6B6B;
-  }
-  
-  
-  
-  @media (min-width: 768px){
-    .hamburger{
-        display: none;
-    }
-    .menu{
-      display: flex;
-    }
-  
-    }
-  
-  body{
-      background: #eeeff4;
-  }
-  
-  
-  /* end of navbar CSS */
-  
-  /* semantic header  */
-  
-  
-  
-  header{
-    display: block;
-    padding: 30px;
-    top: 70px;
+}
+
+/* The "responsive" class is added to the myMenu with JavaScript when the user clicks on the icon. This class makes the myMenu look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .myMenu.responsive {position: relative;}
+  .myMenu.responsive a.icon {
     position: absolute;
-      width: 100%;
-      height: 50px;
-      background: #4ECDC4;
-      color: #fff;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 20px;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-weight: 900;
+    right: 0;
+    top: 0;
   }
-  
-  
-  
-  header a{
-    color: #fff;
-    margin: 0 16px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.4s;
-    padding: 8px 16px;
-    border-radius: 99px;
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
   }
-  
-  header a:hover{
-    background-color: #426ACF;
-  }
-  
-  /* end of header */
-  
-  /* responsive design for the cards */
-  
-  @media screen and (max-width: 1790px){
-      .cards_wrap .card_item{
-          width: 45%;
-      }
-      header {
-          font-size: 16px;
-  
-      
-    }
-  }
-  
-  @media screen and (max-width: 768px){
-      .cards_wrap .card_item{
-          width: 50%;
-      }
-      header{
-          font-size: 14px;
-  }
-  }
-  
-  @media screen and (max-width: 568px){
-      .cards_wrap .card_item{
-          width: 100%;
-      }
-  header{
-          font-size: 12px;
-  
-  }
-  }
-  
-  
-  /* .navbutton {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #4CAF50;
-  }
-  
-  .navButton:hover {
-    background-color: #4CAF50;
-    color: white;
-  }
-   */
-  section{
-      align-items: center;
-      justify-content: center;
-  
-  }
+}
