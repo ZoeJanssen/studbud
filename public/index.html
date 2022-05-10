@@ -5,11 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudBud</title>
-    <link href="styles/main.scss" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="styles/main.scss">
 
-    <!-- <link rel="stylesheet" href="styles/main.scss"> -->
-
- 
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -18,28 +15,27 @@
 
 <body>
 
-
  <!--   start of nav bar -->
  <!-- using nav to have semantic html  -->
  <!-- but also using 2 divs within my nav bar so that the content is seperated using Presentational markup -->
-    <nav>
-        <div class ="logo" id="myLogo">
-          <h1> StudBud</h1>
-            <div class = "menu" id="myMenu">
-              <a href="index.html">My Profile</a>
-              <a href = "myworkspace.html">My Workspace</a>
-              <a href = "mytasks.html">My Tasks</a>
-              <a href = "myresources.html">My Resources</a>
-             
-              <!-- this is so that there is a hamburger menu to create a responsive design -->
-              <!-- The link with class="icon" is used to open and close the topnav on small screens. -->
-               <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-              </a>
-            </div>
-          </div>
-      </nav>
-    <!--   end of nav bar -->
+ <nav>
+  <div class ="logo" id="myLogo">
+    <h1> StudBud</h1>
+      <div class = "menu" id="myMenu">
+        <a href="index.html">My Profile</a>
+        <a href = "myworkspace.html">My Workspace</a>
+        <a href = "mytasks.html">My Tasks</a>
+        <a href = "myresources.html">My Resources</a>
+                   </div>
+        <!-- this is so that there is a hamburger menu to create a responsive design -->
+        <!-- The link with class="icon" is used to open and close the topnav on small screens. -->
+         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+
+    </div>
+</nav>
+<!--   end of nav bar -->
 
 <script src="nav.js"></script>   
 

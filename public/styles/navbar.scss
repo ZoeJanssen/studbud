@@ -1,24 +1,42 @@
 
-/* Add a black background color to the top navigation */
-  // nav bar styling
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;900&display=swap');
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
   
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Noto Sans JP', sans-serif;
-}
-
+  h1{
+    color: #fff;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  h2{
+    color: #000;
+    font-size: 24px;
+    font-weight: 900;
+  }
+  
+  
+  
+  /* start of navbar CSS */
+  
+  
   .logo{
-    /*   my screen size is larger than 1080 px so it will start for a 15 inch laptop */
-      max-width: 1790px;
-      margin: 0; 
-    
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
+  /*   my screen size is larger than 1080 px so it will start for a 15 inch laptop */
+    max-width: 1790px;
+    margin: 0; 
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
   nav{
     position: fixed;
     top: 0;
@@ -29,63 +47,62 @@
     padding: 16px 32px;
     border-bottom: 3px; 
   }
-
-  .menu{
+  
+   .menu{
     display: none;
     flex: 1 1 0%;
-    // justify-content: flex-end;
+    justify-content: flex-end;
     margin: 0 -16px;
   }
+    /* Style the links inside the navigation bar */
   
-  /* Style the links inside the navigation bar */
-  .menu a {
-    // float: right;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
+  .menu a{
+    color: #fff;
+    margin: 0 16px;
+    font-weight: 600;
     text-decoration: none;
-    font-size: 17px;
-  }
-
-  
-  /* Change the color of links on hover */
-  .menu a:hover {
-    background-color: #fff;
-    color:  #426ACF;
+    transition: 0.4s;
+    padding: 8px 16px;
+    border-radius: 99px;
   }
   
-  /* Add an active class to highlight the current page */
-  .menu a.active {
-    background-color: #04AA6D;
-    color: white;
+    /* Change the color of links on hover */
+    /* Add an active class to highlight the current page */
+  
+  .menu a.is-active, .menu a:hover{
+      background-color: #fff;
+      color:  #426ACF;
   }
   
-  /* Hide the link that should open and close the menu on small screens */
-  .menu .icon {
-    display: none;
-  }
-  
-  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the menu (.icon) */
-  @media screen and (max-width: 600px) {
-    .menu a:not(:first-child) {display: none;}
-    .menu a.icon {
-      float: right;
-      display: block;
+  @media (min-width: 768px){
+    .menu a.icon{
+        display: none;
+    }
+    .menu{
+      display: flex;
     }
   }
   
-  /* The "responsive" class is added to the menu with JavaScript when the user clicks on the icon. This class makes the menu look good on small screens (display the links vertically instead of horizontally) */
-  @media screen and (max-width: 600px) {
-    .menu.responsive {position: relative;}
-    .menu.responsive a.icon {
-      position: absolute;
-      right: 0;
-      top: 0;
+    /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the menu (.icon) */
+    @media screen and (max-width: 600px) {
+      .menu a:not(:first-child) {display: none;}
+      .menu a.icon {
+        float: right;
+        display: block;
+      }
     }
-    .menu.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
+    
+    /* The "responsive" class is added to the menu with JavaScript when the user clicks on the icon. This class makes the menu look good on small screens (display the links vertically instead of horizontally) */
+    @media screen and (max-width: 600px) {
+      .menu.responsive {position: relative;}
+      .menu.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .menu.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
     }
-  }
