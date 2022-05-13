@@ -3,13 +3,13 @@
 
 // Javascript for the task list
 
-document.getElementById('open').addEventListener("click", function() {
-	document.querySelector('.bg-modal').style.display = "flex";
-});
+// document.getElementById('open').addEventListener("click", function() {
+// 	document.querySelector('.bg-modal').style.display = "flex";
+// });
 
-document.querySelector('.close').addEventListener("click", function() {
-	document.querySelector('.bg-modal').style.display = "none";
-});
+// document.querySelector('.close').addEventListener("click", function() {
+// 	document.querySelector('.bg-modal').style.display = "none";
+// });
 
 
 const form = document.getElementById("taskform");

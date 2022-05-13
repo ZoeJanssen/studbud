@@ -1,0 +1,390 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;900&display=swap');
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+  
+  
+  
+  /* button css */
+  button{
+    background-color: #426ACF;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 7px;
+    font-size: 1rem;
+  }
+  
+  button:hover {
+    cursor: pointer;
+  }
+  
+  /* end of button css */
+  
+  /* start of navbar CSS */
+  
+  
+  .container{
+  /*   my screen size is larger than 1080 px so it will start for a 15 inch laptop */
+    max-width: 1790px;
+    margin: 0;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  
+
+  
+  .menu a.is-active, .menu a:hover{
+    background-color: #FF6B6B;
+  }
+  
+  @media (min-width: 768px){
+
+    .menu{
+      display: flex;
+    }
+  }
+  
+  body{
+    background: #eeeff4;
+  }
+  
+  
+  .cards_wrap{
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+  }
+  
+  /* makes 3 cards in a row using 33% */
+  .cards_wrap .card_item{
+    padding: 15px 25px;
+    width: 33%;
+  }
+  
+  .cards_wrap .card_inner{
+    background: #fff;
+    border-radius: 5px;
+    padding: 35px 20px;
+    min-width: 225px;
+    min-height: 315px;
+    max-height: 370px;
+    width: 100%;
+  }
+  
+  
+  .cards_wrap .card_item img{
+    margin-bottom: 5px;
+  }
+  /* header CSS */  
+  
+  // header for the nav bar
+  .header a{
+    color: #fff;
+    margin: 0 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.4s;
+    padding: 8px 16px;
+    border-radius: 99px;
+  }
+  
+  
+  
+  /* responsive design for the cards */
+  
+  @media screen and (max-width: 1790px){
+    .cards_wrap .card_item{
+      width: 45%;
+    }
+    .wrapper .header {
+      font-size: 16px;
+      height: 60px;
+      
+    }
+  }
+  
+  @media screen and (max-width: 768px){
+    .cards_wrap .card_item{
+      width: 50%;
+    }
+    .wrapper .header{
+      font-size: 14px;
+  }
+  }
+  
+  @media screen and (max-width: 568px){
+    .cards_wrap .card_item{
+      width: 100%;
+    }
+    .wrapper .header{
+      font-size: 12px;
+  
+  }
+  }
+  
+  
+  /* CSS for the task list */
+  body {font-family: Arial, Helvetica, sans-serif;}
+  * {box-sizing: border-box;}
+  
+  /* Button used to open the contact form - fixed at the bottom of the page */
+  .open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+  }
+  
+  /* The popup form - hidden by default */
+  .form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 400px;
+    max-height: 600px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=select] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 14px 20px;
+    margin: 8px 0;
+  
+    cursor: pointer;
+  }
+  
+  input[type=date] {
+    width: 100%;
+  font-family: arial;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type=time] {
+    width: 100%;
+  font-family: arial;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=number] {
+    width: 100%;
+  
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+  /* CSS for to do list / assignment list */
+  
+  
+  ul {
+    list-style-type: none; /* get rid of bullet points on side of list items */
+  
+  }
+  /* common style ends */
+  .container-2 {
+    display: float;
+    flex-direction: column;
+    align-items: center;
+    max-width: 450px;
+  
+  }
+  
+
+  /* todo-form */
+  .todo-form {
+    margin: 40px 0px;
+  }
+  .todo-input {
+    width: 250px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+  
+  /* todo-form style ends */
+  
+  /* todo-items */
+  
+  /* each li with class="item" */
+  .item {
+    background-color: #fff;
+    padding: 10px;
+    font-size: 1.1rem;
+  }
+  .item:first-child {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+  }
+  .item:last-child {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+  }
+  /* item style end */
+  .checkbox {
+    margin-right: 10px;
+  }
+  .delete-button {
+    float: right;
+    background-color: #FF6B6B;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 2px 5px;
+    margin-left: 10px;
+    font-size: 1.1rem;
+    font-weight: 550;
+  }
+  /* applied when the todo item is checked */
+  .checked { 
+    text-decoration: line-through;
+  }
+  /* assignment style ends */
+  
+  
+  
+  
+  /* stop watch CSS */
+  .watch {
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+  
+  }
+  
+  .watch .time {
+    font-size: 5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+  
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .controls button {
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+  
+    background-color: #426ACF;
+  
+    transition: 0.4s;
+    user-select: none;
+  }
+  
+  .controls button:hover {
+    opacity: 0.7;
+  }
+  
+  /* stop watch CSS end  */
+  
+  
+  /* task list css */
+  
+  #taskform {
+      margin: 0 auto;
+      label {
+          display: block;
+          width: 90%;
+      }
+  }
+  
+  br{
+    padding: 10px;
+  
+  }
+  
+  
+  
+  
+  /* end of task list css */
