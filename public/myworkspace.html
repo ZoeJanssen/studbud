@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Workspace</title>
 
+    <link rel="stylesheet" href="styles/tasklist.scss" >
     <link rel="stylesheet" href="styles/main.scss" >
 </head>
 <body>
@@ -28,17 +29,55 @@
       <!-- Task List feature  -->
 
       <div class = "card_item">
-        <div class = "card_inner">
+        <div class = "card_inner" id="task_card">
               <h2>Task List</h2>
-
-          </div>
+              <form id="taskform">
+                <label for="task">Task:</label>
+                <input type="text" name="task" id="taskInput">
+          
+                <br>
+              <!-- Date input -->
+                <label for="dueDate">Due Date: </label>
+                <input type="date" name="dueDate" id="dueDateInput">
+                <br>
+              <!-- Time input -->
+              <label for="completionTime">Completion Time: </label>
+                <input type="time" name="completionTime" id="completionTimeInput">
+          
+                <br>
+          
+              <label for="estimatedTime">Estimated completion time (in mins):</label>
+              <input type="number" name="estimatedTime" id="estimatedTimeInput">
+              <!-- Priority -->
+              <br>
+          
+              <label for="priority">Task Priority:</label>
+              <select name="prority" id="priorityInput">
+                <option value="">Select one</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+              </select>
+          
+              <br>
+          
+                <button type="submit">Submit</button>
+              </form>
+              <ul id="tasklist">
+              </ul>
         </div>
+          </div>
+
+<!-- end of task list  -->
+
     <!--       Stop watch feature  -->
     <!--       (Tyler potts, 2022) -->
+    
           <div class = "card_item">
             <div class = "card_inner">
+
               <h2>Stopwatch</h2>
-                <div class = "inclusion"> 
+                <!-- <div class = "inclusion">  -->
                   <div class="watch">
                     <div class="time">
                       00:00:00
@@ -51,25 +90,58 @@
                   </div>
                 </div>
               </div>
-            </div>
+
     
     <!--       Music Player feature  -->
           <div class = "card_item">
             <div class = "card_inner">
              <h2>Music Player</h2>
-                <div class = "inclusion"> 
                <iframe src="https://open.spotify.com/embed/playlist/471N195f5jAVs086lzYglw" width="100%" height="200" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe> 
               </div>
-            </div>
           </div>
+
     
      <!--       Pomodoro time feature  -->
           <div class = "card_item">
             <div class = "card_inner">
-              <h2>Pomodoro Timer </h2>
-                <div class = "inclusion"> 
-              
-              </div>
+              <h2>Pomodoro Timer </h2>  
+              <div class="main">
+		
+                <div class="container">
+                  
+                  <div class="session-length">
+                    <div class="pomodoro-length">
+                      <p>Session Length</p>
+                      <button class="btn btn-count" id="pomodoro-plus-btn">+</button>
+                      <span class="pomodoro-minutes-count"></span>
+                      <button class="btn btn-count" id="pomodoro-minus-btn">-</button>
+                    </div>
+            
+                    <div class="break-time-length">
+                      <p>Break Time</p>
+                      <button class="btn btn-count" id="break-plus-btn">+</button>
+                      <span class="break-minutes-count"></span>
+                      <button class="btn btn-count" id="break-minus-btn">-</button>
+                    </div>
+                  </div>
+            
+                  <section class="clock">
+            
+                    <div class="clock-timer" id="clock-timer">
+                      <span class="minutes"></span>:<span class="seconds"></span>
+                    </div>
+            
+                    <div class="options">
+                      <button class="btn btn-control start-pomodoro">Start Pomodoro</button>
+                      <button class="btn btn-control break">Take a break</button>
+                      <button class="btn btn-control reset hidden">Reset</button>
+                    </div>			
+            
+                  </section>			
+            
+                </div>
+            
+              </div>            
             </div>
           </div>
     
@@ -77,25 +149,26 @@
           <div class = "card_item">
             <div class = "card_inner">
               <h2>Inspiration Generator</h2>
-                <div class = "inclusion"> 
                      <!-- <img src="https://source.unsplash.com/random/370x225" alt="">
                   <button id = "generate"> Generate Image </button>
                   <button id = "resource list"> Add to Resource List </button> -->
-              </div>
             </div>
           </div>
     
-    <!--       Assignment list feature  -->     
+    <!--       Colour generator feature  -->     
           <div class = "card_item">
             <div class = "card_inner">
-                <div class = "inclusion"> 
-                  <div class="container-2">
-                    <h2>Assignment List</h2>
-                      
-                  </div>
+              <h2>Colour Generator</h2>   
+              <!-- <div class="container3">
+                <div>
+                  <input type="color" id="color">
+                  <h4 id="text">#000000</h4>
+                  <button id="changeColour"> Click to change Colour</button> -->
+
+                  <p>click to change Colour</p>
                 </div>
-            </div>
-          </div>
+              </div>
+              
         </div>
       </div>
       
@@ -103,8 +176,9 @@
 <script src="stopwatch.js"></script>   
      
       <script src="tasks.js"></script>
+      <script src="pomodoro.js"></script>   
 
 <script src="workspace.js"></script>   
-
+<script src="colourgenerator.js"></script>   
 </body>
 </html>

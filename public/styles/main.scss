@@ -1,4 +1,7 @@
 @import 'navbar';
 @import 'typography';
-@import 'kanbanboard';
+
+// importing the css for specific elements into the overall css file
 @import 'workspace';
+@import 'tasklist';
+@import 'colourgenerator';
