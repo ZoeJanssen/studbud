@@ -1,41 +1,43 @@
-// function randomInteger(max) {
-//     return Math.floor(Math.random()*(max + 1));
-// }
+function randomInteger(max) {
+    return Math.floor(Math.random()*(max + 1));
+}
 
-// function randomRgbColor() {
-//     let r = randomInteger(255);
-//     let g = randomInteger(255);
-//     let b = randomInteger(255);
-//     return [r,g,b];
-// }
+function randomRgbColor() {
+    let r = randomInteger(255);
+    let g = randomInteger(255);
+    let b = randomInteger(255);
+    return [r,g,b];
+}
 
-// function randomHexColor() {
-//     let [r,g,b] =randomRgbColor();
+function randomHexColor() {
+    let [r,g,b] =randomRgbColor();
 
-//     let hr = r.toString(16).padStart(2, '0');
-//     let hg = g.toString(16).padStart(2, '0');
-//     let hb = b.toString(16).padStart(2, '0');
+    let hr = r.toString(16).padStart(2, '0');
+    let hg = g.toString(16).padStart(2, '0');
+    let hb = b.toString(16).padStart(2, '0');
 
-//     return "#" + hr + hg + hb;
-// }
+    return "#" + hr + hg + hb;
+}
 
-// function changeColor() {
-//   let hex = randomHexColor();
+function changeColor() {
+  let hex = randomHexColor();
 
-//   // trying to get it to only click for the button
+  let button = document.getElementById('changeColour')
+
+  // trying to get it to only click for the button
 //   document.getElementById('changeColour')
 //   document.getElementById("myButton1").value="hex"; 
 
   
-//   document.getElementById('color').value = hex;
-//   document.getElementById('text').innerHTML = hex;
-// }
+  document.getElementById('color').value = hex;
+  document.getElementById('text').innerHTML = hex;
+}
 
-// function clickHandler(event) {
-//   changeColor();
-//   event.preventDefault();
-// }
+function clickHandler(event) {
+  changeColor();
+  event.preventDefault();
+}
+// 
+button.addEventListener('click', clickHandler);
 
-// document.addEventListener('click', clickHandler);
-
-// changeColor();
+changeColor();

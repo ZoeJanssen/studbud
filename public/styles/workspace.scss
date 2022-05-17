@@ -7,8 +7,20 @@
     box-sizing: border-box;
     font-family: 'Noto Sans JP', sans-serif;
   }
-  
-  
+  // removing bullet points and styling the task list adding
+  #tasklist {
+    list-style-type: none;
+    padding: 40px;
+  }
+
+  // #tasklist li{
+
+  // }
+  // li.tasklist {
+  //   list-style-type: none;
+  //   margin: 0;
+  //   padding: 40px;
+  // }
   
   /* button css */
   button{
