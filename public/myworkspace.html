@@ -22,49 +22,11 @@
     </div>
   </div>
 
-            <div class = "cards_wrap">
-
-
-      
+     <div class = "cards_wrap">     
       <!-- Task List feature  -->
-
       <div class = "card_item">
-        <div class = "card_inner" id="task_card">
-              <h2>Task List</h2>
-              <form id="taskform">
-                <label for="task">Task:</label>
-                <input type="text" name="task" id="taskInput">
-          
-                <br>
-              <!-- Date input -->
-                <label for="dueDate">Due Date: </label>
-                <input type="date" name="dueDate" id="dueDateInput">
-                <br>
-              <!-- Time input -->
-              <label for="completionTime">Completion Time: </label>
-                <input type="time" name="completionTime" id="completionTimeInput">
-          
-                <br>
-          
-              <label for="estimatedTime">Estimated completion time (in mins):</label>
-              <input type="number" name="estimatedTime" id="estimatedTimeInput">
-              <!-- Priority -->
-              <br>
-          
-              <label for="priority">Task Priority:</label>
-              <select name="prority" id="priorityInput">
-                <option value="">Select one</option>
-                <option value="Low">Low</option>
-                <option value="Medium">Medium</option>
-                <option value="High">High</option>
-              </select>
-          
-              <br>
-          
-                <button type="submit">Submit</button>
-              </form>
-              <ul id="tasklist">
-              </ul>
+        <div class = "card_inner">
+          <h2>TaskList</h2>
         </div>
           </div>
 
@@ -104,44 +66,28 @@
      <!--       Pomodoro time feature  -->
           <div class = "card_item">
             <div class = "card_inner">
-              <h2>Pomodoro Timer </h2>  
-              <div class="main">
-		
-                <div class="container">
-                  
-                  <div class="session-length">
-                    <div class="pomodoro-length">
-                      <p>Session Length</p>
-                      <button class="btn btn-count" id="pomodoro-plus-btn">+</button>
-                      <span class="pomodoro-minutes-count"></span>
-                      <button class="btn btn-count" id="pomodoro-minus-btn">-</button>
-                    </div>
-            
-                    <div class="break-time-length">
-                      <p>Break Time</p>
-                      <button class="btn btn-count" id="break-plus-btn">+</button>
-                      <span class="break-minutes-count"></span>
-                      <button class="btn btn-count" id="break-minus-btn">-</button>
-                    </div>
+              <div id ="pomodoro_container">
+                <p id="work" class ="label">work:</p>
+                  <p id="break" class ="label">break:</p>
+                  <p id="cycles" class ="label">cycles:</p>
+                <!--   work timer  -->
+                  <div id ="worktimer" class = "timer">
+                    <p id="wminutes">25</p>
+                    <p class ="semicolon">:</p>
+                      <p id="wseconds">00</p>
+                  </div>    
+                  <p id ="counter" class ="timer">0</p>
+                <!--   break timer  -->
+                    <div id ="breaktimer" class = "timer">
+                    <p id="bminutes">5</p>
+                    <p class ="semicolon">:</p>
+                      <p id="bseconds">00</p>
                   </div>
-            
-                  <section class="clock">
-            
-                    <div class="clock-timer" id="clock-timer">
-                      <span class="minutes"></span>:<span class="seconds"></span>
-                    </div>
-            
-                    <div class="options">
-                      <button class="btn btn-control start-pomodoro">Start Pomodoro</button>
-                      <button class="btn btn-control break">Take a break</button>
-                      <button class="btn btn-control reset hidden">Reset</button>
-                    </div>			
-            
-                  </section>			
-            
-                </div>
-            
-              </div>            
+                <!-- buttons for timer -->
+                  <button id = "start" class="btn">Start</button>
+                  <button id = "stop"class="btn">Stop</button>
+                  <button id = "reset"class="btn">Reset</button>
+                </div>   
             </div>
           </div>
     
@@ -159,11 +105,11 @@
           <div class = "card_item">
             <div class = "card_inner">
               <h2>Colour Generator</h2>   
-              <!-- <div class="container3">
+              <div class="container3">
                 <div>
                   <input type="color" id="color">
                   <h4 id="text">#000000</h4>
-                  <button id="changeColour"> Click to change Colour</button> -->
+                  <button id="changeColour"> Click to change Colour</button>
 
                   <p>click to change Colour</p>
                 </div>
