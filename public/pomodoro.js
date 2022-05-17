@@ -1,150 +1,91 @@
-// $(document).ready(function () {
+// (learn-webdev, 2020)
+// learn-webdev. (2020). Pomodoro Timer | Javascript Beginner Project Tutorial [YouTube Video]. Retrieved from https://www.youtube.com/watch?v=vAEG6OVCass&t=271s&ab_channel=learn-webdev
 
-// 	//Set global variables
+var start = document.getElementById('start');
+var stop = document.getElementById('stop');
+var reset = document.getElementById('reset');
 
-// 	var pomodoro = 25, currentTime = Date.parse(new Date()), deadline, timeInterval, breakTime = 5, i;
+// work timer
+var wm = document.getElementById('wminutes');
+var ws = document.getElementById('wseconds');
 
-// 	//Display the clock
+// break timer 
+var bm = document.getElementById('bminutes');
+var bs = document.getElementById('bseconds');
 
-// 	var clock = document.getElementById("clock-timer");
-// 	var minutesSpan = clock.querySelector(".minutes");
-// 	var secondsSpan = clock.querySelector(".seconds");
+// store a refrence to a timer variable 
+var startTimer; 
 
-// 	$(".pomodoro-minutes-count").html(pomodoro);
-// 	$(".break-minutes-count").html(breakTime);
-// 	minutesSpan.innerHTML = ("0" + pomodoro).slice(-2);
-// 	secondsSpan.innerHTML = "00";
+// timer will fire every second when clicked but it is 
 
-// 	//Customise length of each pomodoro
+start.addEventListener('click', function(){
+    if(startTimer === undefined){
+        startTimer = setInterval(timer, 1000)
+    } else {
+        alert("Timer is already running");
+    }
+})
+// reset timer
+reset.addEventListener('click', function(){
+    wm.innerText = 25;
+    ws.innerText = "00";
 
-// 	$("#pomodoro-plus-btn").click(function () {
-// 		pomodoro++;
-// 		if (pomodoro > 60 ) {
-// 			pomodoro = 60;
-// 		}
+    bm.innerText = 5;
+    bs.innerText = "00";
 
-// 		$(".pomodoro-minutes-count").html(pomodoro);
-// 		minutesSpan.innerHTML = ("0" + pomodoro).slice(-2);
-// 	});
+    document.getElementById('counter').innerText = 0;
+    stopInterval()
+    startTimer = undefined;
+})
 
-// 	$("#pomodoro-minus-btn").click(function () {
-// 		pomodoro--;
-// 		if (pomodoro < 1) {
-// 			pomodoro = 1;
-// 		}
-// 		$(".pomodoro-minutes-count").html(pomodoro);
-// 		minutesSpan.innerHTML = ("0" + pomodoro).slice(-2);
-// 	});
+// stop timer
+stop.addEventListener('click', function(){
+    stopInterval()
+    startTimer = undefined;
+})
 
-// 	//Customise break length
 
-// 	$("#break-plus-btn").click(function () {
-// 		breakTime++;
-// 		if (breakTime > 15) {
-// 			breakTime = 15;
-// 		}
-// 		$(".break-minutes-count").html(breakTime);
-// 	});
 
-// 	$("#break-minus-btn").click(function () {
-// 		breakTime--;
-// 		if (breakTime < 1) {
-// 			breakTime = 1;
-// 		}
-// 		$(".break-minutes-count").html(breakTime);
-// 	});
 
-// 	//Calculate the time remaining
-		
-// 	function getTimeLeft (end) {
-// 		var total = Date.parse(end) - Date.parse(new Date());
-// 		var seconds = Math.floor((total/1000) % 60);
-// 		var minutes = Math.floor((total/1000/60) % 60);
 
-// 		return {
-// 			"total": total,
-// 			"minutes": minutes,
-// 			"seconds": seconds
-// 		};
-// 	}
 
-// 	//Initialize the timer
+// create a function to count down
+// inner html is the work text 
+function timer(){
+  // work timer count down
+    if(ws.innerText != 0){
+    // if does not equal it will go down by 1
+        ws.innerText--;
+    } else if(wm.innerText != 0 && ws.innerText == 0){
+    ws.innerText = 59;// we call this function each minute
+        wm.innerText--;
+  }
 
-// 	function startClock () {
-// 		timeInterval = setInterval(function () {
-// 			var t = getTimeLeft(deadline);
-// 			minutesSpan.innerHTML = ("0" + t.minutes).slice(-2);
-// 			secondsSpan.innerHTML = ("0" + t.seconds).slice(-2);
-// 			$("title").html(("0" + t.minutes).slice(-2) + ":" + ("0" + t.seconds).slice(-2));
+  // break timer count down
+  // if work minutes and work text is 0 and if break seconds is 0 we do the same as above
+ if(wm.innerText == 0 && ws.innerText == 0){
+        if(bs.innerText != 0){
+            bs.innerText--;
+        } else if(bm.innerText != 0 && bs.innerText == 0){
+            bs.innerText = 59;
+            bm.innerText--;
+        }
+    }
 
-// 			if (t.total <= 0) { //If timer reaches zero, stop the timer and reset the clock
-// 				clearInterval(timeInterval);
-// 				if (i === 0) {
-// 					startBreak();
-// 				}
+  // increment counter by one if one full cycle is completed
+  // checking if work minutes is at 0, work seconds is at 0 and if break minutes is at 0 and break seconds at 0
+ if(wm.innerText == 0 && ws.innerText == 0 && bm.innerText == 0 && bs.innerText == 0){
+        wm.innerText = 25;
+        ws.innerText = "00";
 
-// 				else if (i === 1) {
-// 					startPomodoro();
-// 				}
-// 			}
-// 		}, 1000);
-// 	}
+        bm.innerText = 5;
+        bs.innerText = "00";
 
-// 	//Functions for pomodoro, break and reset
+        document.getElementById('counter').innerText++;
+    }
+}
 
-// 	function startPomodoro () {
-// 		minutesSpan.innerHTML = ("0" + pomodoro).slice(-2);
-// 		secondsSpan.innerHTML = "00";
-// 		$(".start-pomodoro, .break, .session-length").addClass('hidden');
-// 		$(".reset").removeClass('hidden');
-// 		$(".btn-count").prop("disabled", true);
-// 		$("body").css('background-color', '#2ECC71');
-// 		deadline = new Date(Date.parse(new Date()) + (pomodoro * 60 * 1000));
-// 		startClock();
-// 		i = 0;
-// 	}
-
-// 	function startBreak () {
-// 		minutesSpan.innerHTML = ("0" + breakTime).slice(-2);
-// 		secondsSpan.innerHTML = "00";
-// 		$(".start-pomodoro, .break, .session-length").addClass('hidden');
-// 		$(".reset").removeClass('hidden');
-// 		$("body").css('background-color', '#3498DB');
-// 		$(".btn-count").prop("disabled", true);
-// 		deadline = new Date(Date.parse(new Date()) + (breakTime * 60 * 1000)); //Set deadline
-// 		startClock();
-// 		i = 1;
-// 	}
-
-// 	function resetClock () {
-// 		$(".btn-count").prop("disabled", false);
-// 		$("body").css('background-color', '#F1C40F');
-// 		$(".start-pomodoro, .break, .session-length").removeClass('hidden');
-// 		$(".reset").addClass('hidden');
-// 		$(".minutes-count").html(pomodoro);
-// 		$("title").html("Pomodoro")
-// 		clearInterval(timeInterval);
-// 		minutesSpan.innerHTML = ("0" + pomodoro).slice(-2);
-// 		secondsSpan.innerHTML = "00";
-		
-// 	}
-
-// 	//Start Pomodoro
-
-// 	$(".start-pomodoro").click(function() {
-// 		startPomodoro();
-// 	});
-
-// 	//Take a break 
-
-// 	$(".break").click(function () {
-// 		startBreak();
-// 	});
-
-// 	//Reset the clock
-
-// 	$(".reset").click(function () {
-// 		resetClock();
-// 	});
-		
-// });
+//Stop Timer Function
+function stopInterval(){
+    clearInterval(startTimer);
+}
