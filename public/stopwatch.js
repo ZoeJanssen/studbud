@@ -28,7 +28,7 @@ function timer () {
 	time_el.innerText = `${hrs}:${mins}:${secs}`;
 }
 
-function start () {
+function start() {
 	if (interval) {
 		return
 	}

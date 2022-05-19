@@ -37,9 +37,7 @@
     
           <div class = "card_item">
             <div class = "card_inner">
-
               <h2>Stopwatch</h2>
-                <!-- <div class = "inclusion">  -->
                   <div class="watch">
                     <div class="time">
                       00:00:00
@@ -58,7 +56,7 @@
           <div class = "card_item">
             <div class = "card_inner">
              <h2>Music Player</h2>
-               <iframe src="https://open.spotify.com/embed/playlist/471N195f5jAVs086lzYglw" width="100%" height="200" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe> 
+               <iframe src="https://open.spotify.com/embed/playlist/471N195f5jAVs086lzYglw" width="100%" height="230" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe> 
               </div>
           </div>
 
@@ -66,28 +64,28 @@
      <!--       Pomodoro time feature  -->
           <div class = "card_item">
             <div class = "card_inner">
+              <h2>Pomodoro Timer</h2>
               <div id ="pomodoro_container">
-                <p id="work" class ="label">work:</p>
-                  <p id="break" class ="label">break:</p>
-                  <p id="cycles" class ="label">cycles:</p>
                 <!--   work timer  -->
-                  <div id ="worktimer" class = "timer">
+                  <div id ="worktimer" class = "timer_p">
                     <p id="wminutes">25</p>
                     <p class ="semicolon">:</p>
                       <p id="wseconds">00</p>
                   </div>    
-                  <p id ="counter" class ="timer">0</p>
+                  <p id ="counter" class ="timer_p">0</p>
                 <!--   break timer  -->
-                    <div id ="breaktimer" class = "timer">
+                    <div id ="breaktimer" class = "timer_p">
                     <p id="bminutes">5</p>
                     <p class ="semicolon">:</p>
                       <p id="bseconds">00</p>
                   </div>
                 <!-- buttons for timer -->
-                  <button id = "start" class="btn">Start</button>
-                  <button id = "stop"class="btn">Stop</button>
-                  <button id = "reset"class="btn">Reset</button>
-                </div>   
+                <div class = controls_p>
+                  <button id = "start_p">Start</button>
+                  <button id = "stop_p">Stop</button>
+                  <button id = "reset_p">Reset</button>
+                </div>
+                </div>  
             </div>
           </div>
     
@@ -95,26 +93,29 @@
           <div class = "card_item">
             <div class = "card_inner">
               <h2>Inspiration Generator</h2>
-                     <!-- <img src="https://source.unsplash.com/random/370x225" alt="">
-                  <button id = "generate"> Generate Image </button>
-                  <button id = "resource list"> Add to Resource List </button> -->
+              <div class="imageContainer">
+                <a id="imageLink" href="#">
+                  <img alt="" id="unsplashImage"/>
+                </a>
+              </div>
+              <p class="imageDetails">Photo by <a id="creator" href="#">NAME</a> on <a href="https://www.unsplash.com">Unspash</a>!</p>
             </div>
           </div>
     
     <!--       Colour generator feature  -->     
           <div class = "card_item">
             <div class = "card_inner">
-              <h2>Colour Generator</h2>   
-              <div class="container3">
-                <div>
-                  <input type="color" id="color">
-                  <h4 id="text">#000000</h4>
-                  <button id="changeColour"> Click to change Colour</button>
-
-                  <p>click to change Colour</p>
+              <h2>Colour Generator</h2>
+              <div class="random-colour">
+                <div class="random-colour__info">
+                  <div class="random-colour__hex-value">#cccccc</div>
+                </div>
+                <button class="random-button" onclick="generateRandomHexColour()">Generate Random Colour</button>
+              </div>
                 </div>
               </div>
               
+              <!-- end of card features -->
         </div>
       </div>
       
@@ -126,5 +127,7 @@
 
 <script src="workspace.js"></script>   
 <script src="colourgenerator.js"></script>   
+<script src="imageupload.js"></script>   
+
 </body>
 </html>

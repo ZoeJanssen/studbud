@@ -1,9 +1,9 @@
 // (learn-webdev, 2020)
 // learn-webdev. (2020). Pomodoro Timer | Javascript Beginner Project Tutorial [YouTube Video]. Retrieved from https://www.youtube.com/watch?v=vAEG6OVCass&t=271s&ab_channel=learn-webdev
 
-var start = document.getElementById('start');
-var stop = document.getElementById('stop');
-var reset = document.getElementById('reset');
+var start_p = document.getElementById('start_p');
+var stop_p = document.getElementById('stop_p');
+var reset_p = document.getElementById('reset_p');
 
 // work timer
 var wm = document.getElementById('wminutes');
@@ -18,15 +18,15 @@ var startTimer;
 
 // timer will fire every second when clicked but it is 
 
-start.addEventListener('click', function(){
+start_p.addEventListener('click', function(){
     if(startTimer === undefined){
-        startTimer = setInterval(timer, 1000)
+        startTimer = setInterval(timer_p, 1000)
     } else {
         alert("Timer is already running");
     }
 })
 // reset timer
-reset.addEventListener('click', function(){
+reset_p.addEventListener('click', function(){
     wm.innerText = 25;
     ws.innerText = "00";
 
@@ -39,19 +39,16 @@ reset.addEventListener('click', function(){
 })
 
 // stop timer
-stop.addEventListener('click', function(){
+stop_p.addEventListener('click', function(){
     stopInterval()
     startTimer = undefined;
 })
 
 
 
-
-
-
 // create a function to count down
 // inner html is the work text 
-function timer(){
+function timer_p(){
   // work timer count down
     if(ws.innerText != 0){
     // if does not equal it will go down by 1

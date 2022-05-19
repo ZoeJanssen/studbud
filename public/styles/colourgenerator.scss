@@ -1,17 +1,42 @@
-#color {
-    // width: 13em;
-    // height: 8em;
-    width: 100%;
-    height: 100%;
-  }
+.random-colour {
+  // set a background colour
+  // if js is not available
+  background-color: #25c3e8;
+ height: 100%;
+//  width: 100%;
+ min-height: 240px;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+ display: flex;
+
+}
+
+.random-colour__info {
+  width: 33%;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  background-color: #ffffff;
+  // vertically align center
+  position: relative;
+  border-radius: 2%;
+}
+
+.random-button {
+    margin: auto;
+    padding: 10px;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   
-  
-  
-  .container3 {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
-  
+    background-color: #426ACF;
+}
+
+
+.random-colour__hex-value {
+  font-size: 2rem;
+  color: black;
+}

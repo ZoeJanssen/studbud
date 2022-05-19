@@ -1,43 +1,19 @@
-function randomInteger(max) {
-    return Math.floor(Math.random()*(max + 1));
-}
-
-function randomRgbColor() {
-    let r = randomInteger(255);
-    let g = randomInteger(255);
-    let b = randomInteger(255);
-    return [r,g,b];
-}
-
-function randomHexColor() {
-    let [r,g,b] =randomRgbColor();
-
-    let hr = r.toString(16).padStart(2, '0');
-    let hg = g.toString(16).padStart(2, '0');
-    let hb = b.toString(16).padStart(2, '0');
-
-    return "#" + hr + hg + hb;
-}
-
-function changeColor() {
-  let hex = randomHexColor();
-
-  let button = document.getElementById('changeColour')
-
-  // trying to get it to only click for the button
-//   document.getElementById('changeColour')
-//   document.getElementById("myButton1").value="hex"; 
-
+function generateRandomHexColour() {
+  // Math.random()*16777215)
+  // Multiply a random number (0 - 1) by 16777215 which is decimal number for ffffff (white)
+  // Convert this decimal to a string with a parameter that will return a hexadecimal value
+  // Use a Math.floor method to make sure we only get integers
+  var randomColour = '#' + Math.floor(Math.random()*16777215).toString(16);
+ 
+  // find this class and change the background colour the random hex value above
+  document.querySelector(".random-colour").style.backgroundColor = randomColour; 
   
-  document.getElementById('color').value = hex;
-  document.getElementById('text').innerHTML = hex;
+  // find this class and replace the content with the random hex value
+  document.querySelector(".random-colour__hex-value").textContent = randomColour;
 }
 
-function clickHandler(event) {
-  changeColor();
-  event.preventDefault();
-}
-// 
-button.addEventListener('click', clickHandler);
-
-changeColor();
+// on window load run the generateRandomHexColour function to ensure
+// we have a colour and text hex value to start with.
+window.onload = function() {
+  generateRandomHexColour();
+};
