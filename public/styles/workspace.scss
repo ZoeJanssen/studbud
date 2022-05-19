@@ -188,8 +188,16 @@
   /* stop watch CSS end  */
   
   
+#acronym_container{
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+}
 
-  
-  
-  
-  /* end of task list css */
+.acronym_result {
+  display: block;
+  height: 1.5rem;
+  font-size: 30px;
+}
