@@ -1,68 +1,125 @@
-// // Setting up variables for our HTML elements using DOM selection
-// const form = document.getElementById("taskform");
-// const button = document.querySelector("#taskform > button"); // Complex CSS query
-// const tasklist = document.getElementById("tasklist");
-// const taskInput = document.getElementById("taskInput");
-
-// // Event listener for Button click
-// // This could also be form.addEventListener("submit", function() {...} )
-// button.addEventListener("click", function(event) {
-//   event.preventDefault(); // Not as necessary for button, but needed for form submit
-
-//   let task = form.elements.task.value; // could be swapped out for line below
-//   //let task = taskInput.value;
-
-//   let date = (new Date()).toLocaleDateString('en-US') //Convert to short date format
-
-//   // Call the addTask() function using
-//   addTask(task, date, "26/03/2021", "Low", ["1", "30"], false);
-
-//   // Log out the newly populated taskList everytime the button has been pressed
-//   console.log(taskList);
-// })
-
-// // Create an empty array to store our tasks
-// var taskList = [];
-
-// function addTask(taskDescription, createdDate, dueDate, priorityRating, estimatedTime, completionStatus) {
-//   let task = {
-//     taskDescription,
-//     createdDate,
-//     dueDate,
-//     priorityRating,
-//     estimatedTime,
-//     completionStatus
-//   };
-
-
-
-//   // Add the task to our array of tasks
-//   taskList.push(task);
-
-//   // Separate the DOM manipulation from the object creation logic
-//   renderTask(task);
-// }
-
-
-// // Function to display the item on the page
-// function renderTask(task) {
-//   let item = document.createElement("li");
-//   item.innerHTML = task.taskDescription + "<br>" + task.dueDate + "<br>" + task.createdDate + "<br>" + task.estimatedTime + "<br>" + task.priorityRating + "<br>" ;
-
-//   tasklist.appendChild(item);
-
-//   // Setup delete button DOM elements
-//   let delButton = document.createElement("button");
-//   let delButtonText = document.createTextNode("Delete");
-//   delButton.appendChild(delButtonText);
-//   item.appendChild(delButton); // Adds a delete button to every task
-
-//   // Listen for when the 
-//   delButton.addEventListener("click", function(event){
-//     item.remove(); // Remove the task item from the page when button clicked
-//     // Because we used 'let' to define the item, this will always delete the right element
-//   })
+// Book Class: Represents a Book
+class Book {
+    constructor(task, dueDate, completionTime, estimatedTime, taskPriority) {
+      this.task = task;
+      this.dueDate = dueDate;
+      this.completionTime = completionTime;
+      this.estimatedTime = estimatedTime;
+      this.taskPriority = taskPriority;
+    }
+  }
   
-//   // Clear the value of the input once the task has been added to the page
-//   form.reset();
-// }
+  // UI Class: Handle UI Tasks
+  class UI {
+    static displayBooks() {
+      const books = Store.getBooks();
+  
+      books.forEach((book) => UI.addBookToList(book));
+    }
+  
+    static addBookToList(book) {
+      const list = document.querySelector('#book-list');
+  
+      const row = document.createElement('tr');
+  
+      row.innerHTML = `
+        <td>${book.task}</td>
+        <td>${book.dueDate}</td>
+        <td>${book.completionTime}</td>
+        <td>${book.estimatedTime}</td>
+        <td>${book.taskPriority}</td>
+        <td><a href="#" class="btn btn-danger btn-sm delete">X</a></td>
+      `;
+  
+      list.appendChild(row);
+    }
+  
+    static deleteBook(el) {
+      if(el.classList.contains('delete')) {
+        el.parentElement.parentElement.remove();
+      }
+    }
+  
+  
+    static clearFields() {
+      document.querySelector('#task').value = '';
+      document.querySelector('#dueDate').value = '';
+      document.querySelector('#completionTime').value = '';
+      document.querySelector('#estimatedTime').value = '';
+      document.querySelector('#taskPriority').value = '';
+  
+    }
+  }
+  
+  // Store Class: Handles Storage
+  class Store {
+    static getBooks() {
+      let books;
+      if(localStorage.getItem('books') === null) {
+        books = [];
+      } else {
+        books = JSON.parse(localStorage.getItem('books'));
+      }
+  
+      return books;
+    }
+  
+    static addBook(book) {
+      const books = Store.getBooks();
+      books.push(book);
+      localStorage.setItem('books', JSON.stringify(books));
+    }
+  
+    static removeBook(completionTime) {
+      const books = Store.getBooks();
+  
+      books.forEach((book, index) => {
+        if(book.completionTime === completionTime) {
+          books.splice(index, 1);
+        }
+      });
+  
+      localStorage.setItem('books', JSON.stringify(books));
+    }
+  }
+  
+  // Event: Display Books
+  document.addEventListener('DOMContentLoaded', UI.displayBooks);
+  
+  // Event: Add a Book
+  document.querySelector('#book-form').addEventListener('submit', (e) => {
+    // Prevent actual submit
+    e.preventDefault();
+  
+    // Get form values
+    const task = document.querySelector('#task').value;
+    const dueDate = document.querySelector('#dueDate').value;
+    const completionTime = document.querySelector('#completionTime').value;
+      const estimatedTime = document.querySelector('#estimatedTime').value;
+    const taskPriority = document.querySelector('#taskPriority').value;
+  
+  
+      const book = new Book(task, dueDate, completionTime, estimatedTime, taskPriority);
+  
+      // Add Book to UI
+      UI.addBookToList(book);
+  
+      // Add book to store
+      Store.addBook(book);
+  
+  
+  
+      // Clear fields
+      UI.clearFields();
+  
+  });
+  
+  // Event: Remove a Book
+  document.querySelector('#book-list').addEventListener('click', (e) => {
+    // Remove book from UI
+    UI.deleteBook(e.target);
+  
+    // Remove book from store
+    Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
+  
+  });
