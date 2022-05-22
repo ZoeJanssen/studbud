@@ -14,12 +14,13 @@ subButton.addEventListener("click", function() {
   // Start by getting the form values.
   let itemName = document.getElementById("itemname").value;
         let taskDate = document.getElementById('taskdate').value;
+  
+    taskDate = (new Date(taskDate)).toLocaleDateString('en-GB');
+  
        let taskCompletion = document.getElementById('taskcompletion').value;
         let taskEstimate = document.getElementById('taskestimate').value;
         let taskPriority = document.getElementById('taskpriority').value;
 
-          console.log(itemName);
-        console.log(taskDate);
   // Make a JS object to contain the data we want to write into local storage for each item. This is nice because we can have one key:value pair as we do here, or 50.
   let itemObj = {
     'itemName': itemName,
@@ -71,7 +72,6 @@ function getItems() {
 function renderItems() {
   // Use our custom getItems() function to retrieve info from local storage.
   let items = getItems();
-
   // Find the UL element within the #itemlist DIV.
   let itemUl = document.querySelector('#itemlist ul');
 
@@ -82,8 +82,13 @@ function renderItems() {
   items.forEach(function(item) {
 
     // Create a li DOM element to hold each item
+
     let itemLi = document.createElement('li');
 
+    // makes the list be draggable
+     itemLi.setAttribute('draggable', 'true');
+   itemLi.setAttribute('ondragstart', 'drag(event)');
+    
     // Now we could just set innerText or innerHTML to hold the item name, but if we want to have more than one variable displayed, this gets messy fast. Don't do this, it's poor practice and the code ends up clumsy and hard to maintain.
     // itemLi.innerHTML = "<strong>" + item.itemName + "</strong>";
 
@@ -93,7 +98,8 @@ function renderItems() {
     let itemName = document.createElement('span');
     itemName.setAttribute('class', 'itemname'); // We can set classes so CSS can target it nicely later.
     itemName.innerText = item.itemName; // And we just put the text into this span, and nothing else.
-   
+    
+
     let taskDate = document.createElement('span');
     taskDate.setAttribute('class', 'taskdate');
     taskDate.innerText = item.taskDate; 
@@ -102,17 +108,14 @@ function renderItems() {
     taskCompletion.setAttribute('class', 'taskcompletion');
     taskCompletion.innerText = item.taskCompletion; 
 
-
-         let taskEstimate = document.createElement('span');
+    let taskEstimate = document.createElement('span');
     taskEstimate.setAttribute('class', 'taskestimate');
     taskEstimate.innerText = item.taskEstimate; 
 
-
-            let taskPriority = document.createElement('span');
+let taskPriority = document.createElement('span');
     taskPriority.setAttribute('class', 'taskPriority');
     taskPriority.innerText = item.taskPriority; 
  
-    
     // Add an element to represent the remove button
     let itemRemove = document.createElement('button');
     itemRemove.setAttribute('class', 'remove');
@@ -130,16 +133,15 @@ function renderItems() {
     });
 
     // Add the name and remove button to the li
-    itemLi.appendChild(itemName);
-        itemLi.appendChild(taskDate);
-        itemLi.appendChild(taskCompletion);
-        itemLi.appendChild(taskEstimate);
-          itemLi.appendChild(taskPriority);
-    
-    itemLi.appendChild(itemRemove);
+itemLi.appendChild(itemName);
+itemLi.appendChild(taskDate);
+itemLi.appendChild(taskCompletion); 
+    itemLi.appendChild(taskEstimate); 
+    itemLi.appendChild(taskPriority);  itemLi.appendChild(itemRemove);
 
     // Add the li to the ul.
     itemUl.appendChild(itemLi);
+
   });
 }
 
@@ -162,3 +164,20 @@ function removeItem(itemName) {
   items = JSON.stringify(items);
   localStorage.setItem('items', items);
 }
+
+
+
+
+   function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }

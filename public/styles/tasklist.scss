@@ -1,5 +1,33 @@
 
-input[type=text], select {
+.itemname, .taskdate, .taskcompletion, .taskestimate, .taskpriority, .itemsubmit{
+  padding: 5px;
+}
+
+.remove{
+  background-color: red;
+  color: white;
+    outline: none;
+    border: none;
+}
+
+li{
+  list-style: none;
+  padding: 10px;
+}
+
+
+#itemsubmit {
+  margin: 0.2rem 0rem 0.1rem 0rem;
+  background-color: white;
+  border-radius: 0.2rem;
+  width: 100%;
+/*   border: 0.25rem solid black; */
+  padding: 0.5rem 2.7rem;
+  font-size: 1rem;
+}
+
+
+input, select{
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -7,57 +35,64 @@ input[type=text], select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-}
-
-input[type=select] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type=submit] {
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 14px 20px;
-  margin: 8px 0;
-
-  cursor: pointer;
-}
-
-input[type=date] {
-  width: 100%;
-font-family: arial;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  cursor: pointer;
-}
-input[type=time] {
-  width: 100%;
-font-family: arial;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type=number] {
-  width: 100%;
-
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  cursor: pointer;
 }
 
 .form-group{
   display: flex;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card1{
+    text-align: center;
+    background-color: grey;
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+    height: 800;
+    margin: 30px;
+    padding: 20px;
+}
+
+.card2{
+    text-align: center;
+    background-color: #FF6B6B;
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+    height: 800;
+    margin: 30px;
+    padding: 20px;
+}
+
+.card3{
+    text-align: center;
+    background-color: #FFE66D;
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+    height: 800;
+    margin: 30px;
+    padding: 20px;
+}
+
+.card4{
+    text-align: center;
+    background-color: #4ECDC4;
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+    height: 800;
+    margin: 30px;
+    padding: 20px;
+}
+
+#itemlist{
+  background-color: #fff;
+
 }
