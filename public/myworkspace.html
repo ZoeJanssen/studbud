@@ -27,6 +27,40 @@
       <div class = "card_item">
         <div class = "card_inner">
           <h2>TaskList</h2>
+
+  <div id="itemfields">
+    <label for="itemname">Task List:</label>
+    <input type="text" id="itemname">
+    <br>
+    <label for="taskdate"> Date Due: </label>
+    <input type="datetime" id="taskdate">
+
+         <label for="taskcompletion">Completion Time: </label>
+      <input type="time" id="taskcompletion">
+
+ <label for="taskestimate">Estimated completion time (in mins):</label>
+    <input type="number"  id="taskestimate"> 
+
+ <label for="taskpriority">Task Priority:</label>
+    <select name="prority" id="taskpriority">
+      <option value="">Select one</option>
+      <option value="Low">Low</option>
+      <option value="Medium">Medium</option>
+      <option value="High">High</option>
+    </select>
+    
+
+    <button id="itemsubmit">Add to the list</button>
+  </div>
+
+  <!--
+  This is just a skeleton of the item list. We will add items into that UL using JS
+  -->
+  <div id="itemlist">
+    <ul>
+    </ul>
+  </div>
+
         </div>
           </div>
 
