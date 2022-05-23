@@ -1,28 +1,25 @@
 
+  // styles the text for the workspace
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;900&display=swap');
 
+
+  // styles the overall document
   *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Noto Sans JP', sans-serif;
   }
-  // removing bullet points and styling the task list adding
+  // styles the removing bullet points and styling the task list adding
   #tasklist {
     list-style-type: none;
     padding: 40px;
   }
 
-  // #tasklist li{
-
-  // }
-  // li.tasklist {
-  //   list-style-type: none;
-  //   margin: 0;
-  //   padding: 40px;
-  // }
   
   /* button css */
+
+  // styles the common button css
   button{
     background-color: #426ACF;
     color: #fff;
@@ -33,15 +30,17 @@
     font-size: 1rem;
   }
   
+  // styles the common button hover
   button:hover {
     cursor: pointer;
+    opacity: 0.7;
   }
   
   /* end of button css */
   
   /* start of navbar CSS */
   
-  
+  // styles the container of the overall feature
   .container{
   /*   my screen size is larger than 1080 px so it will start for a 15 inch laptop */
     max-width: 1790px;
@@ -52,21 +51,13 @@
     justify-content: space-between;
   }
   
-  .menu a.is-active, .menu a:hover{
-    background-color: #FF6B6B;
-  }
-  
-  @media (min-width: 768px){
-    .menu{
-      display: flex;
-    }
-  }
+
   
   body{
     background: #eeeff4;
   }
   
-  
+  // styles the overall of the divs with the features
 .cards_wrap{
 	padding: 20px;
 	width: 100%;
@@ -81,6 +72,7 @@
 	width: 33%;
 }
 
+// styles the inside of the div for features
 .cards_wrap .card_inner{
 	background: #fff;
 	border-radius: 5px;
@@ -95,20 +87,6 @@
 
 }
 
-
-  /* header CSS */  
-  
-  // header for the nav bar
-  .nav a{
-    color: #fff;
-    margin: 0 16px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.4s;
-    padding: 8px 16px;
-    border-radius: 99px;
-  }
-  
   /* responsive design for the cards */
   
   @media screen and (max-width: 1790px){
@@ -140,9 +118,10 @@
   
   }
   }
-  
-  
+
   /* stop watch CSS */
+
+  // styles the container for the watch
   .watch {
     text-align: center;
     justify-content: center;
@@ -151,18 +130,21 @@
     padding: 20px;
   }
   
+  // styles the text for the watch
   .watch .time {
     font-size: 5rem;
     font-weight: 300;
     margin-bottom: 1rem;
   }
   
+  // styles the container for the buttons
   .controls {
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
+  // styles the buttons for the stop watch
   .controls button {
     appearance: none;
     background: none;
@@ -190,6 +172,7 @@
   
   // acronym CSS 
 
+  // styles the container of the acronym
 #acronym_container{
   text-align: center;
   justify-content: center;
@@ -198,16 +181,9 @@
   padding: 20px;
   height: 200px;
   align-items: center;
-
 }
 
-
-#phrase_label{
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-}
-
+// styles the phrase outcome
 .phrase{
   align-items: center;
   text-align: center;
@@ -216,13 +192,16 @@
 }
 
 
+/// styles buttons for the changing of colours
+
+// styles the buttons fro
 #buttoncontainer, .button{
   padding: 15px;
   margin-top: 20px;
     padding: 15px 32px;
 
 }
-
+// styles the colour of the buttons and changes the yellow button to have black text or else it is not readible
 .button2 {background-color: #f44336;} 
 .button3 {background-color: #f6bd60;} 
 .button4 {background-color: #fdffb6; color: black;}

@@ -12,11 +12,11 @@ start_btn.addEventListener("click", start);
 stop_btn.addEventListener("click", stop);
 reset_btn.addEventListener("click", reset);
 
-// Update the timer
+// Update the timer to add seconds each time
 function timer () {
 	seconds++;
 
-	// Format our time
+	// Formating  our time
 	let hrs = Math.floor(seconds / 3600);
 	let mins = Math.floor((seconds - (hrs * 3600)) / 60);
 	let secs = seconds % 60;
@@ -28,6 +28,7 @@ function timer () {
 	time_el.innerText = `${hrs}:${mins}:${secs}`;
 }
 
+// starts the inclination of the interval 
 function start() {
 	if (interval) {
 		return
@@ -36,11 +37,15 @@ function start() {
 	interval = setInterval(timer, 1000);
 }
 
+
+// stops the timer but keeps it at the interval it was before
 function stop () {
 	clearInterval(interval);
 	interval = null;
 }
 
+
+// resets the timer to be 0
 function reset () {
 	stop();
 	seconds = 0;

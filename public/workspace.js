@@ -1,5 +1,6 @@
 
-// normal / basic change colour style
+// function to change the background colour when the button is pressed
+// the colour the background is also is reflected with the button colour
 function changeStyle(){
     document.body.style.backgroundColor = "#F0F0F0";
 }

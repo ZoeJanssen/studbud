@@ -25,21 +25,24 @@
 <div class ="box"></div>
 
      <div class = "cards_wrap">     
-      <!-- Task List feature  -->
+      <!-- Background Change feature  -->
       <div class = "card_item">
         <div class = "card_inner" id = "card_inner">
           <h2>Change Colour</h2>     
-          <p> Click Button to change your environment </p>   
+          <p> Click Button to change your environment </p>  
+          <!-- this houses all of the buttons  -->
           <div class = "buttoncontainer">
-<button class="button" onclick= "changeStyle()">Normal</button>
-<button class="button button2"onclick= "changeStyleRed()">Red</button>
-<button class="button button3"onclick= "changeStyleOrange()">Orange</button>
-<button class="button button4"onclick= "changeStyleYellow()">Yellow</button>
-<button class="button button5"onclick= "changeStyleGreen()">Green</button>
-<button class="button button6"onclick= "changeStyleBlue()">Blue</button>
-<button class="button button7"onclick= "changeStylePurple()">Purple</button>
-<button class="button button8"onclick= "changeStylePink()">Pink</button>
-<button class="button button9"onclick= "changeStyleBlack()">Black</button>
+            <!-- the buttons changes the background colour -->
+            <!-- calls on the javascript to change colour when the button is pressed  -->
+          <button class="button" onclick= "changeStyle()">Normal</button>
+            <button class="button button2"onclick= "changeStyleRed()">Red</button>
+        <button class="button button3"onclick= "changeStyleOrange()">Orange</button>
+        <button class="button button4"onclick= "changeStyleYellow()">Yellow</button>
+        <button class="button button5"onclick= "changeStyleGreen()">Green</button>
+        <button class="button button6"onclick= "changeStyleBlue()">Blue</button>
+        <button class="button button7"onclick= "changeStylePurple()">Purple</button>
+        <button class="button button8"onclick= "changeStylePink()">Pink</button>
+        <button class="button button9"onclick= "changeStyleBlack()">Black</button>
         </div>
           </div>
         </div>
@@ -47,7 +50,7 @@
 
     <!--       Stop watch feature  -->
     <!--       (Tyler potts, 2022) -->
-    
+  
           <div class = "card_item">
             <div class = "card_inner" id = "card_inner">
               <h2>Stopwatch</h2>
@@ -109,8 +112,8 @@
               <div class="acronym_container">
               <p> Enter Phrase Below! (Make sure to have spaces between words)</p>
                 <input type="text" id="phrase" />
-              
               <button id="phrase-button"> Make Acronym </button>
+              <!-- had to include the style size as it was not changing otherwise for the output -->
             <p id="acronym-result" style="font-size: 40px;"> </p>
             </div>
             </div>
@@ -124,6 +127,7 @@
                 <div class="random-colour__info">
                   <div class="random-colour__hex-value">#cccccc</div>
                 </div>
+                <!-- calls on javascript to change the colour of the div -->
                 <button class="random-button" onclick="generateRandomHexColour()">Generate Random Colour</button>
               </div>
                 </div>
@@ -134,6 +138,7 @@
       </div>
       
     <!-- end of the card layout  -->
+    <!-- calling on the different javascript code  -->
 <script src="stopwatch.js"></script>   
      
       <script src="tasks.js"></script>
@@ -141,7 +146,6 @@
 
 <script src="workspace.js"></script>   
 <script src="colourgenerator.js"></script>   
-<script src="imageupload.js"></script>   
 <script src="acronym.js"></script>   
 
 

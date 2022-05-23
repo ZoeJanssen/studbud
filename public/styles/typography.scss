@@ -1,3 +1,4 @@
+// styles the heading found in the nav bar
 h1{
   color: #fff;
   font-size: 28px;
@@ -6,33 +7,33 @@ h1{
   text-transform: uppercase;
 }
 
+// styles the heading at the top of the workspace features
 h2{
   color: #000;
   font-size: 24px;
   font-weight: 900; 
   letter-spacing: 1px;
   font-weight: lighter;
-
 }
 
+// styles the heading of the kanban board
 h3{
   color: #000;
   font-size: 24px;
   font-weight: 900; 
   letter-spacing: 1px;
   text-transform: uppercase;
-
 }
 
-
+// styles the heading to be thicker than h2
 h4 {
   color: #000;
   font-size: 24px;
   letter-spacing: 1px;
   font-weight: 400; 
-
 }
 
+// styles the text so that there is space between
 p{
  margin-top: 10px;
 }

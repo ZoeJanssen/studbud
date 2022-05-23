@@ -27,15 +27,17 @@
 <!-- start of kanban-board -->
 
 <!-- task list  -->
-     <!-- <button class ="btn-add">Creating Column</button> -->
-
+<!--  is in a row and div container so that the design will be responsive and also so that the divs will be side by side -->
 <div class = "div-container">
   <div class ="row"> 
 
+<!-- having the task list on the first card  -->
     <div class = "card1">
+      <!-- the task list with varioys different forms -->
     <div id="itemfields" >
       <h3> Task List </h3>
 
+    
   <label for="itemname">Task List:</label>
   <input type="text" id="itemname">
   <br/>
@@ -63,8 +65,9 @@
 <!-- end of task list  -->
 
 <!-- columns for kanbanboard -->
+<!-- added the drag class to the columns so that they are the parent of the child  -->
           <div class = "card2" ondrop="drop(event)" ondragover="allowDrop(event)"> 
-        <!-- makes the heading change text  -->
+        <!-- makes the heading change text with the editable content phrase  -->
             <h3 contentEditable="true"> To do </h3>
           <!-- the output of the form goes here    -->
           <div id="itemlist" draggable="true" ondragstart="drag(event)"> 
