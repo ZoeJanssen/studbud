@@ -5,84 +5,150 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Workspace</title>
     <link rel="icon" type="image/x-icon" href="styles/Asset 2.png">
 
+    <link rel="stylesheet" href="styles/tasklist.scss" >
     <link rel="stylesheet" href="styles/main.scss" >
-
 </head>
 <body>
 
-  <!-- (“How to Create a Responsive Header,”, W3Schools, 2022) -->
 
-  <!-- start of Navbar using header  -->
 <nav>
     <a href="#default" class="logo">STUDBUD</a>
-    <!-- nav bar links -->
     <div class="header-right">
-      <a class="active" href="index.html">My Profile</a>
-      <a href="myworkspace.html">My Workspace</a>
+      <a class="active" href="index.html">My Workspace</a>
       <a href="mytasks.html">My Tasks</a>
-      <!-- <a href="myresources.html">My Resources</a> -->
     </div>
-</nav>
+  </nav>
 
-  <!-- end of navbar -->
- 
-<!-- start of kanban-board -->
+<div class ="box"></div>
 
-<!-- 
-<div class = "containerStud">
-  <div class ="row">
-    <div class = "card1">
-    <div id="itemfields" >
-      <h3> Task Lit </h3>
+     <div class = "cards_wrap">     
+      <!-- Background Change feature  -->
+      <div class = "card_item">
+        <div class = "card_inner" id = "card_inner">
+          <h2>Change Colour</h2>     
+          <p> Click Button to change your environment </p>  
+          <!-- this houses all of the buttons  -->
+          <div class = "buttoncontainer">
+            <!-- the buttons changes the background colour -->
+            <!-- calls on the javascript to change colour when the button is pressed  -->
+          <button class="button" onclick= "changeStyle()">Normal</button>
+            <button class="button button2"onclick= "changeStyleRed()">Red</button>
+        <button class="button button3"onclick= "changeStyleOrange()">Orange</button>
+        <button class="button button4"onclick= "changeStyleYellow()">Yellow</button>
+        <button class="button button5"onclick= "changeStyleGreen()">Green</button>
+        <button class="button button6"onclick= "changeStyleBlue()">Blue</button>
+        <button class="button button7"onclick= "changeStylePurple()">Purple</button>
+        <button class="button button8"onclick= "changeStylePink()">Pink</button>
+        <button class="button button9"onclick= "changeStyleBlack()">Black</button>
+        </div>
+          </div>
+        </div>
+<!-- end of task list  -->
 
-  <label for="itemname">Task List:</label>
-  <input type="text" id="itemname">
-  <br/>
-  <label for="taskdate"> Date Due: </label>
-  <input type="date" id="taskdate">
-  <br/>
-       <label for="taskcompletion">Completion Time: </label>
-    <input type="time" id="taskcompletion">
-  <br/>
-<label for="taskestimate">Estimated completion time (in mins):</label>
-  <input type="number"  id="taskestimate"> 
-  <br/>
-<label for="taskpriority">Task Priority:</label>
-  <select name="prority" id="taskpriority">
-    <option value="">Select one</option>
-    <option value="Low">Low</option>
-    <option value="Medium">Medium</option>
-    <option value="High">High</option>
-  </select>
+    <!--       Stop watch feature  -->
+    <!--       (Tyler potts, 2022) -->
+  
+          <div class = "card_item">
+            <div class = "card_inner" id = "card_inner">
+              <h2>Stopwatch</h2>
+                  <div class="watch">
+                    <div class="time">
+                      00:00:00
+                    </div>
+                    <div class="controls">
+                      <button id="start">Start</button>
+                      <button id="stop">Stop</button>
+                      <button id="reset">Reset</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-  <br/>
-  <button id="itemsubmit">Add New Task</button>
-</div>
-</div>
-          <div class = "card2" ondrop="drop(event)" ondragover="allowDrop(event)"> 
-          <h3> To do </h3>
-            <div id="itemlist" draggable="true" ondragstart="drag(event)"> 
-                <ul > 
-                </ul> 
+    
+    <!--       Music Player feature  -->
+          <div class = "card_item">
+            <div class = "card_inner" id = "card_inner">
+             <h2>Music Player</h2>
+               <iframe src="https://open.spotify.com/embed/playlist/471N195f5jAVs086lzYglw" width="100%" height="230" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe> 
               </div>
           </div>
-          <div class = "card3" ondrop="drop(event)" ondragover="allowDrop(event)"> 
-          <h3> In progress </h3>
+
+    
+     <!--       Pomodoro time feature  -->
+          <div class = "card_item">
+            <div class = "card_inner" id = "card_inner">
+              <h2>Pomodoro Timer</h2>
+              <div id ="pomodoro_container">
+                <!--   work timer  -->
+                  <div id ="worktimer" class = "timer_p">
+                    <p id="wminutes">25</p>
+                    <p class ="semicolon">:</p>
+                      <p id="wseconds">00</p>
+                  </div>    
+                  <p id ="counter" class ="timer_p">0</p>
+                <!--   break timer  -->
+                    <div id ="breaktimer" class = "timer_p">
+                    <p id="bminutes">5</p>
+                    <p class ="semicolon">:</p>
+                      <p id="bseconds">00</p>
+                  </div>
+                <!-- buttons for timer -->
+                <div class = controls_p>
+                  <button id = "start_p">Start</button>
+                  <button id = "stop_p">Stop</button>
+                  <button id = "reset_p">Reset</button>
+                </div>
+                </div>  
+            </div>
           </div>
-          <div class = "card4"ondrop="drop(event)" ondragover="allowDrop(event)">
-            <h3> Finished </h3>
+    
+     <!--       acronym generator feature  -->
+          <div class = "card_item">
+            <div class = "card_inner" id = "card_inner">
+              <h2>Acronym Generator</h2>
+              <div class="acronym_container">
+              <p> Enter Phrase Below! (Make sure to have spaces between words)</p>
+                <input type="text" id="phrase" />
+              <button id="phrase-button"> Make Acronym </button>
+              <!-- had to include the style size as it was not changing otherwise for the output -->
+            <p id="acronym-result" style="font-size: 40px;"> </p>
+            </div>
+            </div>
           </div>
-  </div>
-</div> -->
+    
+    <!--       Colour generator feature  -->     
+          <div class = "card_item">
+            <div class = "card_inner" id = "card_inner">
+              <h2>Colour Generator</h2>
+              <div class="random-colour">
+                <div class="random-colour__info">
+                  <div class="random-colour__hex-value">#cccccc</div>
+                </div>
+                <!-- calls on javascript to change the colour of the div -->
+                <button class="random-button" onclick="generateRandomHexColour()">Generate Random Colour</button>
+              </div>
+                </div>
+              </div>
+              
+              <!-- end of card features -->
+        </div>
+      </div>
+      
+    <!-- end of the card layout  -->
+    <!-- calling on the different javascript code  -->
+<script src="stopwatch.js"></script>   
+     
+      <script src="tasks.js"></script>
+      <script src="pomodoro.js"></script>   
 
-<!-- end of kanban board -->
+<script src="workspace.js"></script>   
+<script src="colourgenerator.js"></script>   
+<script src="acronym.js"></script>   
 
-  <!-- <script src="tasks.js"></script> -->
 
-  <!-- <script src="imageupload.js"></script> -->
 </body>
 
 </html>
