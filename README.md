@@ -23,7 +23,7 @@ I found this assignment to be very enjoyable and a fun challenge. It was a lot m
     * Re-Designed Mockup
       (img/editedWorkspace.png)
     * Final Version
-     (img/currentWorkspace.png)
+     (img/finalWorkspace.png)
 
 * __Resource List__
     * I removed this page as i changed features from Reading list to Acronym generator as i felt that it would be more beneficial to a creative mind to use acronyms then have a reading list 
@@ -34,7 +34,7 @@ I found this assignment to be very enjoyable and a fun challenge. It was a lot m
     * Original Mockup
       (img/orignalKanban.png)
     * Final Version
-     (img/currentKanban.png)
+     (img/finalTask.png)
 
 ## Requirements
 
@@ -101,4 +101,4 @@ Hays, M. (2020). P047 day47 acronym generator worked out [YouTube Video]. Retrie
 __Colour Generator__
 How To Generate a Random Color in JavaScript | CSS-Tricks. (2009, December 10). Retrieved May 23, 2022, from CSS-Tricks website: https://css-tricks.com/snippets/javascript/random-hex-color/
 
-‌* I followed along this code to understand how to use the add event listener to the div without changing the colour of the background which took me a little bit of time to work out
+‌ * I followed along this code to understand how to use the add event listener to the div without changing the colour of the background which took me a little  bit of time to work out
