@@ -8,22 +8,25 @@
   color: white;
     outline: none;
     border: none;
+    border-radius: 10%;
+    margin: 5px;
 }
 
 li{
   list-style: none;
-  padding: 10px;
+  padding: 5px;
 }
 
 
 #itemsubmit {
-  margin: 0.2rem 0rem 0.1rem 0rem;
+  margin: 1.5rem 0rem 0.1rem 0rem;
   background-color: white;
   border-radius: 0.2rem;
   width: 100%;
 /*   border: 0.25rem solid black; */
   padding: 0.5rem 2.7rem;
   font-size: 1rem;
+  color: #426ACF;
 }
 
 
@@ -50,13 +53,18 @@ input, select{
 
 .card1{
     text-align: center;
-    background-color: grey;
+    background-color: #426ACF;
     position: relative;
     flex: 1;
     max-width: 400px;
-    height: 800;
+    height: 580px;
     margin: 30px;
-    padding: 20px;
+    padding: 20px;  
+   color: #fff;
+}
+
+.card1 h3{
+  color: #fff;
 }
 
 .card2{
@@ -65,7 +73,7 @@ input, select{
     position: relative;
     flex: 1;
     max-width: 400px;
-    height: 800;
+    height: 800px;
     margin: 30px;
     padding: 20px;
 }
@@ -76,7 +84,7 @@ input, select{
     position: relative;
     flex: 1;
     max-width: 400px;
-    height: 800;
+    height: 800px;
     margin: 30px;
     padding: 20px;
 }
@@ -87,12 +95,19 @@ input, select{
     position: relative;
     flex: 1;
     max-width: 400px;
-    height: 800;
+    height: 800px;
     margin: 30px;
     padding: 20px;
 }
 
 #itemlist{
   background-color: #fff;
-
+  margin-top: 20px;
 }
+
+@media screen and (max-width: 768px){
+  .card1, .card2, .card3, .card4{
+      width: 100%;
+  
+  }
+  }

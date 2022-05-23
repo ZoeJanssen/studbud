@@ -166,7 +166,7 @@ function removeItem(itemName) {
 }
 
 
-
+// code for the drag and drop 
 
    function drag(ev) {
             ev.dataTransfer.setData("text", ev.target.id);
@@ -176,8 +176,11 @@ function removeItem(itemName) {
             ev.preventDefault();
         }
 
-        function drop(ev) {
-            ev.preventDefault();
-            var data = ev.dataTransfer.getData("text");
-            ev.target.appendChild(document.getElementById(data));
+  function drop(ev) {
+      ev.preventDefault();
+       var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
         }
+
+
+// creating new column with a button 

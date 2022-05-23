@@ -16,10 +16,9 @@
   <div class="header">
     <a href="#default" class="logo">STUDBUD</a>
     <div class="header-right">
-      <a href="index.html">My Profile</a>
+      <a href="index.html">My Nothing</a>
       <a href="myworkspace.html">My Workspace</a>
       <a class="active" href="mytasks.html">My Tasks</a>
-      <!-- <a href="myresources.html">My Resources</a> -->
     </div>
   </div>
 
@@ -27,11 +26,16 @@
 
 <!-- start of kanban-board -->
 
+<!-- task list  -->
+     <button class ="btn-add">Creating Column</button>
 
-<div class = "containerStud">
-  <div class ="row">
+<div class = "div-container">
+  <div class ="row"> 
+
     <div class = "card1">
     <div id="itemfields" >
+      <h3> Task List </h3>
+
   <label for="itemname">Task List:</label>
   <input type="text" id="itemname">
   <br/>
@@ -51,26 +55,32 @@
     <option value="Medium">Medium</option>
     <option value="High">High</option>
   </select>
-
   <br/>
   <button id="itemsubmit">Add New Task</button>
 </div>
 </div>
+
+<!-- end of task list  -->
+
+<!-- columns for kanbanboard -->
           <div class = "card2" ondrop="drop(event)" ondragover="allowDrop(event)"> 
-          <h3> To do </h3>
-            <div id="itemlist" draggable="true" ondragstart="drag(event)"> 
+        <!-- makes the heading change text  -->
+            <h3 contentEditable="true"> To do </h3>
+          <!-- the output of the form goes here    -->
+          <div id="itemlist" draggable="true" ondragstart="drag(event)"> 
                 <ul > 
                 </ul> 
               </div>
           </div>
           <div class = "card3" ondrop="drop(event)" ondragover="allowDrop(event)"> 
-          <h3> In progress </h3>
+          <h3 contentEditable="true"> In progress </h3>
           </div>
-          <div class = "card4"ondrop="drop(event)" ondragover="allowDrop(event)">
-            <h3> Finished </h3>
+          <div class = "card4" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h3 contentEditable="true"> Finished </h3>
           </div>
   </div>
 </div>
+
 
 <!-- end of kanban board -->
 
