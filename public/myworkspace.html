@@ -12,65 +12,43 @@
 <body>
 
 
-  <div class="header">
+<nav>
     <a href="#default" class="logo">STUDBUD</a>
     <div class="header-right">
-      <a href="index.html">My Profile</a>
+      <a href="index.html">My Nothing</a>
       <a class="active" href="myworkspace.html">My Workspace</a>
       <a href="mytasks.html">My Tasks</a>
-      <!-- <a href="myresources.html">My Resources</a> -->
     </div>
-  </div>
+  </nav>
+
+<div class ="box"></div>
 
      <div class = "cards_wrap">     
       <!-- Task List feature  -->
       <div class = "card_item">
-        <div class = "card_inner">
-          <h2>TaskList</h2>
-
-  <div id="itemfields">
-    <label for="itemname">Task List:</label>
-    <input type="text" id="itemname">
-    <br>
-    <label for="taskdate"> Date Due: </label>
-    <input type="date" id="taskdate">
-
-         <label for="taskcompletion">Completion Time: </label>
-      <input type="time" id="taskcompletion">
-
- <label for="taskestimate">Estimated completion time (in mins):</label>
-    <input type="number"  id="taskestimate"> 
-
- <label for="taskpriority">Task Priority:</label>
-    <select name="prority" id="taskpriority">
-      <option value="">Select one</option>
-      <option value="Low">Low</option>
-      <option value="Medium">Medium</option>
-      <option value="High">High</option>
-    </select>
-    
-
-    <button id="itemsubmit">Add to the list</button>
-  </div>
-
-  <!--
-  This is just a skeleton of the item list. We will add items into that UL using JS
-  -->
-  <div id="itemlist">
-    <ul>
-    </ul>
-  </div>
-
+        <div class = "card_inner" id = "card_inner">
+          <h2>Change Colour</h2>     
+          <p> Click Button to change your environment </p>   
+          <div class = "buttoncontainer">
+<button class="button" onclick= "changeStyle()">Normal</button>
+<button class="button button2"onclick= "changeStyleRed()">Red</button>
+<button class="button button3"onclick= "changeStyleOrange()">Orange</button>
+<button class="button button4"onclick= "changeStyleYellow()">Yellow</button>
+<button class="button button5"onclick= "changeStyleGreen()">Green</button>
+<button class="button button6"onclick= "changeStyleBlue()">Blue</button>
+<button class="button button7"onclick= "changeStylePurple()">Purple</button>
+<button class="button button8"onclick= "changeStylePink()">Pink</button>
+<button class="button button9"onclick= "changeStyleBlack()">Black</button>
         </div>
           </div>
-
+        </div>
 <!-- end of task list  -->
 
     <!--       Stop watch feature  -->
     <!--       (Tyler potts, 2022) -->
     
           <div class = "card_item">
-            <div class = "card_inner">
+            <div class = "card_inner" id = "card_inner">
               <h2>Stopwatch</h2>
                   <div class="watch">
                     <div class="time">
@@ -88,7 +66,7 @@
     
     <!--       Music Player feature  -->
           <div class = "card_item">
-            <div class = "card_inner">
+            <div class = "card_inner" id = "card_inner">
              <h2>Music Player</h2>
                <iframe src="https://open.spotify.com/embed/playlist/471N195f5jAVs086lzYglw" width="100%" height="230" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe> 
               </div>
@@ -97,7 +75,7 @@
     
      <!--       Pomodoro time feature  -->
           <div class = "card_item">
-            <div class = "card_inner">
+            <div class = "card_inner" id = "card_inner">
               <h2>Pomodoro Timer</h2>
               <div id ="pomodoro_container">
                 <!--   work timer  -->
@@ -125,21 +103,21 @@
     
      <!--       acronym generator feature  -->
           <div class = "card_item">
-            <div class = "card_inner">
+            <div class = "card_inner" id = "card_inner">
               <h2>Acronym Generator</h2>
-              <div class="acronym_container"
-              <label class="phrase-label" for="phrase">Enter Phrase Below! (Make sure to have spaces between words)
+              <div class="acronym_container">
+              <p> Enter Phrase Below! (Make sure to have spaces between words)</p>
                 <input type="text" id="phrase" />
-              </label>
+              
               <button id="phrase-button"> Make Acronym </button>
-            <p id="acronym-result"> </p>
+            <p id="acronym-result" style="font-size: 40px;"> </p>
             </div>
             </div>
           </div>
     
     <!--       Colour generator feature  -->     
           <div class = "card_item">
-            <div class = "card_inner">
+            <div class = "card_inner" id = "card_inner">
               <h2>Colour Generator</h2>
               <div class="random-colour">
                 <div class="random-colour__info">

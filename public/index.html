@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!doctype html>
+<!-- <!DOCTYPE html> -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +8,6 @@
     <title>Profile</title>
 
     <link rel="stylesheet" href="styles/main.scss" >
-    <link rel="stylesheet" href="styles/imageupload.scss" >
 
 </head>
 <body>
@@ -15,7 +15,7 @@
   <!-- (“How to Create a Responsive Header,”, W3Schools, 2022) -->
 
   <!-- start of Navbar using header  -->
-  <div class="header">
+<nav>
     <a href="#default" class="logo">STUDBUD</a>
     <!-- nav bar links -->
     <div class="header-right">
@@ -24,44 +24,64 @@
       <a href="mytasks.html">My Tasks</a>
       <!-- <a href="myresources.html">My Resources</a> -->
     </div>
-  </div>
+</nav>
 
   <!-- end of navbar -->
  
- <!-- start of picture upload  -->
+<!-- start of kanban-board -->
 
- <article id = navigationButtons>
-   <section>
-  <h2> My Profile</h2>
-
-  <div id="list">
-  </div>
-  <input type="file" id="files">
-
-
-<p id="state">No images stored in your browser.</p>
-<div id="list">
-</div>
-
-<a href="#" id="deleteImgs">Delete Images</a>
-
-</section>
-
-<!-- end of picture upload -->
-
-<!-- start of the buttons to other pages -->
 <!-- 
-<section id = "navButton">
+<div class = "containerStud">
+  <div class ="row">
+    <div class = "card1">
+    <div id="itemfields" >
+      <h3> Task Lit </h3>
 
-  <a href = "myworkspace.html" <button class="button1" >My Workspace</button></a>
-    <a href = "mytasks.html" <button class="button1">My Tasks</button> </a>
-    <a href = "myresources.html" <button class="button1">My Resources</button> </a>
-</section> -->
+  <label for="itemname">Task List:</label>
+  <input type="text" id="itemname">
+  <br/>
+  <label for="taskdate"> Date Due: </label>
+  <input type="date" id="taskdate">
+  <br/>
+       <label for="taskcompletion">Completion Time: </label>
+    <input type="time" id="taskcompletion">
+  <br/>
+<label for="taskestimate">Estimated completion time (in mins):</label>
+  <input type="number"  id="taskestimate"> 
+  <br/>
+<label for="taskpriority">Task Priority:</label>
+  <select name="prority" id="taskpriority">
+    <option value="">Select one</option>
+    <option value="Low">Low</option>
+    <option value="Medium">Medium</option>
+    <option value="High">High</option>
+  </select>
 
-<!-- end of buttons -->
-</article>
+  <br/>
+  <button id="itemsubmit">Add New Task</button>
+</div>
+</div>
+          <div class = "card2" ondrop="drop(event)" ondragover="allowDrop(event)"> 
+          <h3> To do </h3>
+            <div id="itemlist" draggable="true" ondragstart="drag(event)"> 
+                <ul > 
+                </ul> 
+              </div>
+          </div>
+          <div class = "card3" ondrop="drop(event)" ondragover="allowDrop(event)"> 
+          <h3> In progress </h3>
+          </div>
+          <div class = "card4"ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h3> Finished </h3>
+          </div>
+  </div>
+</div> -->
 
-  <script src="imageupload.js"></script>
+<!-- end of kanban board -->
+
+  <!-- <script src="tasks.js"></script> -->
+
+  <!-- <script src="imageupload.js"></script> -->
 </body>
 
 </html>

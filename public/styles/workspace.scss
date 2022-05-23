@@ -99,7 +99,7 @@
   /* header CSS */  
   
   // header for the nav bar
-  .header a{
+  .nav a{
     color: #fff;
     margin: 0 16px;
     font-weight: 600;
@@ -126,7 +126,7 @@
     .cards_wrap .card_item{
       width: 100%;
     }
-    .wrapper .header{
+    .wrapper nav{
       font-size: 14px;
   }
   }
@@ -135,7 +135,7 @@
     .cards_wrap .card_item{
       width: 100%;
     }
-    .wrapper .header{
+    .wrapper nav{
       font-size: 12px;
   
   }
@@ -201,11 +201,6 @@
 
 }
 
-#acronym_result {
-  display: block;
-  height: 1.5rem;
-  font-size: 30px;
-}
 
 #phrase_label{
   align-items: center;
@@ -219,3 +214,21 @@
   justify-content: center;
   font-size: 30px;
 }
+
+
+#buttoncontainer, .button{
+  padding: 15px;
+  margin-top: 20px;
+    padding: 15px 32px;
+
+}
+
+.button2 {background-color: #f44336;} 
+.button3 {background-color: #f6bd60;} 
+.button4 {background-color: #fdffb6; color: black;}
+.button5 {background-color: #4CAF50;}
+.button6 {background-color: #008CBA;}
+.button7 {background-color: #bdb2ff;}
+.button8 {background-color: #ffc6ff;}
+.button9 {background-color: #495057;}
+
