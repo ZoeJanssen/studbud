@@ -40,11 +40,15 @@ I found this assignment to be very enjoyable and a fun challenge. It was a lot m
 
 __Features__
 I used the following features which were required for the code
+
 *Primary Features*
+
 * Task List (found within the Kanban board, Task Page)
 * StopWatch (found within the Workspace Page)
 * Music Player (found within the Workspace Page)
+
 *Secondary Features*
+
 * Kanban Board (found within the Kanban board, Task Page)
     * instead of creating and naming columns i have made the design decision to only allow the user to re name the column as with too much freedom, the user, especially a creative student, will be caught up in the adding and removing of columns, Hence only re-naming it is able to give personal features without distraction
 * Pomodoro Timer (found within the Workspace Page)
@@ -60,9 +64,11 @@ __Technical Requirements__
 
 ## Challenges
 __Local Storage__
+
 Local storage nearly drove me insane, it was increasingly difficult as i over complicated it for myself, i was able to get over this hump by working one form input at a time to ensure that it was working. This method helped for alot of other challenges aswell, making a fresh and new start really allowed me to focus on the code
 
 __Javascript Names__
+
 I had challenges when i would accidentally name the code the same name, this was a particular problem with the pomodoro and stopwatch as i used almost the same names for all the objects
 
 __Various Problems__
