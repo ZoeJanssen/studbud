@@ -1,5 +1,5 @@
-<!doctype html>
-<!-- <!DOCTYPE html> -->
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,8 +8,8 @@
     <title>Workspace</title>
     <link rel="icon" type="image/x-icon" href="styles/Asset 2.png">
 
-    <link rel="stylesheet" href="styles/tasklist.scss" >
-    <link rel="stylesheet" href="styles/main.scss" >
+    <link rel="stylesheet" href="styles/tasklist.scss" />
+    <link rel="stylesheet" href="styles/main.scss" />
 </head>
 <body>
 
@@ -22,27 +22,30 @@
     </div>
   </nav>
 
-<div class ="box"></div>
+
+  <header> 
+    <h3 id = "heading-workspace"> My Workspace: For all your study needs</h3> 
+  </header>
 
      <div class = "cards_wrap">     
       <!-- Background Change feature  -->
       <div class = "card_item">
-        <div class = "card_inner" id = "card_inner">
-          <h2>Change Colour</h2>     
-          <p> Click Button to change your environment </p>  
+        
+        <div class = "card_inner" >
+          <h2>Change Background Colour</h2>     
           <!-- this houses all of the buttons  -->
           <div class = "buttoncontainer">
             <!-- the buttons changes the background colour -->
             <!-- calls on the javascript to change colour when the button is pressed  -->
           <button class="button" onclick= "changeStyle()">Normal</button>
-            <button class="button button2"onclick= "changeStyleRed()">Red</button>
-        <button class="button button3"onclick= "changeStyleOrange()">Orange</button>
-        <button class="button button4"onclick= "changeStyleYellow()">Yellow</button>
-        <button class="button button5"onclick= "changeStyleGreen()">Green</button>
-        <button class="button button6"onclick= "changeStyleBlue()">Blue</button>
-        <button class="button button7"onclick= "changeStylePurple()">Purple</button>
-        <button class="button button8"onclick= "changeStylePink()">Pink</button>
-        <button class="button button9"onclick= "changeStyleBlack()">Black</button>
+            <button class="button button2" onclick= "changeStyleRed()">Red</button>
+        <button class="button button3" onclick= "changeStyleOrange()">Orange</button>
+        <button class="button button4" onclick= "changeStyleYellow()">Yellow</button>
+        <button class="button button5" onclick= "changeStyleGreen()">Green</button>
+        <button class="button button6" onclick= "changeStyleBlue()">Blue</button>
+        <button class="button button7" onclick= "changeStylePurple()">Purple</button>
+        <button class="button button8" onclick= "changeStylePink()">Pink</button>
+        <button class="button button9" onclick= "changeStyleBlack()">Black</button>
         </div>
           </div>
         </div>
@@ -52,7 +55,7 @@
     <!--       (Tyler potts, 2022) -->
   
           <div class = "card_item">
-            <div class = "card_inner" id = "card_inner">
+            <div class = "card_inner" >
               <h2>Stopwatch</h2>
                   <div class="watch">
                     <div class="time">
@@ -70,7 +73,7 @@
     
     <!--       Music Player feature  -->
           <div class = "card_item">
-            <div class = "card_inner" id = "card_inner">
+            <div class = "card_inner">
              <h2>Music Player</h2>
                <iframe src="https://open.spotify.com/embed/playlist/471N195f5jAVs086lzYglw" width="100%" height="230" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe> 
               </div>
@@ -79,7 +82,7 @@
     
      <!--       Pomodoro time feature  -->
           <div class = "card_item">
-            <div class = "card_inner" id = "card_inner">
+            <div class = "card_inner">
               <h2>Pomodoro Timer</h2>
               <div id ="pomodoro_container">
                 <!--   work timer  -->
@@ -107,10 +110,11 @@
     
      <!--       acronym generator feature  -->
           <div class = "card_item">
-            <div class = "card_inner" id = "card_inner">
+            <div class = "card_inner">
               <h2>Acronym Generator</h2>
               <div class="acronym_container">
-              <p> Enter Phrase Below! (Make sure to have spaces between words)</p>
+              <p> Enter Phrase Below! </p> 
+              <p> (Make sure to have spaces between words)</p>
                 <input type="text" id="phrase" />
               <button id="phrase-button"> Make Acronym </button>
               <!-- had to include the style size as it was not changing otherwise for the output -->
@@ -121,7 +125,7 @@
     
     <!--       Colour generator feature  -->     
           <div class = "card_item">
-            <div class = "card_inner" id = "card_inner">
+            <div class = "card_inner">
               <h2>Colour Generator</h2>
               <div class="random-colour">
                 <div class="random-colour__info">
@@ -139,14 +143,14 @@
       
     <!-- end of the card layout  -->
     <!-- calling on the different javascript code  -->
-<script src="stopwatch.js"></script>   
-     
-      <script src="tasks.js"></script>
-      <script src="pomodoro.js"></script>   
+    <script src="javascript.js"></script>   
+
+<!-- <script src="stopwatch.js"></script>   
+ <script src="pomodoro.js"></script>   
 
 <script src="workspace.js"></script>   
 <script src="colourgenerator.js"></script>   
-<script src="acronym.js"></script>   
+<script src="acronym.js"></script>    -->
 
 
 </body>

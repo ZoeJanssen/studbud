@@ -200,14 +200,19 @@
 }
 
 /// styles buttons for the changing of colours
-
+#buttoncontainer{
+  margin: auto;
+  margin-top: 20px;
+}
 // styles the buttons fro
 #buttoncontainer, .button{
-  padding: 10px;
   margin-top: 20px;
-    padding: 15px 32px;
- 
+    padding: 15px 25px;
+
 }
+
+
+
 // styles the colour of the buttons and changes the yellow button to have black text or else it is not readible
 .button2 {background-color: #f44336;} 
 .button3 {background-color: #f6bd60;} 
@@ -218,3 +223,22 @@
 .button8 {background-color: #ffc6ff;}
 .button9 {background-color: #495057;}
 
+
+
+
+header{
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#heading-workspace {
+ color: #fff;
+font-size: 1.8rem;
+background-color: #FF6B6B;
+padding: 0.8rem 1.4rem;
+border-radius: 0.5rem;
+margin: 1rem;
+}
