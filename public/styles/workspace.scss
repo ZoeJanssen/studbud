@@ -167,8 +167,21 @@
   }
   
 
+  
+  @media screen and (max-width: 568px){
+    .watch .time{
+      font-size: 3.5rem;
+    }
+  }
+
+
+
   /* stop watch CSS end  */
   
+
+
+
+
   
   // acronym CSS 
 
@@ -203,13 +216,14 @@
 #buttoncontainer{
   margin: auto;
   margin-top: 20px;
+  
 }
 // styles the buttons fro
 #buttoncontainer, .button{
   margin-top: 20px;
     padding: 15px 25px;
-
 }
+
 
 
 

@@ -11,12 +11,16 @@
     border: none;
     border-radius: 10%;
     margin: 5px;
+    padding: 4px;
 }
 
 /* // style to make sure that their is no bullet point */
 li{
   list-style: none;
-  padding: 5px;
+  padding: 10px;
+  margin: 20px;
+  background-color: #fff;
+  color: black;
 }
 
 /* // style to the specific button to submit with */
@@ -55,23 +59,17 @@ input, select{
 }
 
 
-/* styles all of the cards to be the same */
-.box{
-      position: relative;
+/* // style of the card which houses the task list which is why it is smaller  */
+#card1{
+    background-color: #426ACF;
+    position: relative;
     flex: 1;
-    max-width: 400px;
-    width: 20%;
     height: 800px;
     margin: 30px;
     padding: 20px;  
    color: #fff;
    overflow: auto;
       text-align: center;
-}
-
-/* // style of the card which houses the task list which is why it is smaller  */
-#card1{
-    background-color: #426ACF;
 }
 
 /* // styles the specific heading of only card 1 to be white as it is contrast to the blue */
@@ -82,24 +80,42 @@ input, select{
 /* // styling of card 2  */
 #card2{
     background-color: #FF6B6B;
+    position: relative;
+    flex: 1;
+    height: 800px;
+    margin: 30px;
+    padding: 20px;  
+   color: #fff;
+   overflow: auto;
+      text-align: center;
 
 }
 /* // styling of card 3 */
 #card3{
     background-color: #FFE66D;
+    position: relative;
+    flex: 1;
+    height: 800px;
+    margin: 30px;
+    padding: 20px;  
+   color: #fff;
+   overflow: auto;
+      text-align: center;
 }
 
 /* // styling of card 4 */
 #card4{
     background-color: #4ECDC4;
+    position: relative;
+    flex: 1;
+    height: 800px;
+    margin: 30px;
+    padding: 20px;  
+   color: #fff;
+   overflow: auto;
+      text-align: center;
 }
 
-/* // styling the outcome of the task list to have a white background to contrast the tasks */
-/* #itemlist {
-  background-color: #fff;
-  margin-top: 20px;
-  color: black;
-} */
 
 .dragitem{
   background-color: #fff;
@@ -109,9 +125,15 @@ input, select{
 }
 
 /* // making the cards responsive as they will go to a higher width once the page is decreased in size */
-@media screen and (max-width: 768px){
+@media screen and (max-width: 568px){
   #card1, #card2, #card3, #card4{
-      width: 100%;
-  
+    width: 500px;
+    flex: 100%;
   }
+  }
+
+
+
+  .error{
+    border: 3px solid red;
   }

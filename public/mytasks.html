@@ -23,10 +23,8 @@
 
   <!-- end of nav bar -->
   <header> 
-    <h3 id = "heading-workspace"> My Kanban: Edit Column Names and add tasks</h3> 
+    <!-- <h3 id = "heading-workspace"> Kanban</h3>  -->
   </header>
-
-
 
 <!-- start of kanban-board -->
 
@@ -36,6 +34,10 @@
   <div class ="row"> 
 
 <!-- having the task list on the first card  -->
+
+
+<!-- has to have the same class and a different id as this is the only way that the drag and drop event function  -->
+
     <div class = "box"  id ="card1">
       <!-- the task list with varioys different forms -->
     <div id="itemfields" >
@@ -43,19 +45,19 @@
 
     
   <label for="itemname">Task Name:</label>
-  <input type="text" id="itemname">
+  <input type="text" id="itemname" required>
   <br/>
   <label for="taskdate"> Date Due: </label>
-  <input type="date" id="taskdate">
+  <input type="date" id="taskdate" required>
   <br/>
        <label for="taskcompletion">Completion Time: </label>
-    <input type="time" id="taskcompletion">
+    <input type="time" id="taskcompletion" required>
   <br/>
   <label for="taskestimate">Estimated completion time (in mins):</label>
-  <input type="number"  id="taskestimate"> 
+  <input type="number"  id="taskestimate" required> 
   <br/>
     <label for="taskpriority">Task Priority:</label>
-    <select name="prority" id="taskpriority">
+    <select name="prority" id="taskpriority" required>
     <option value="">Select one</option>
     <option value="Low">Low</option>
     <option value="Medium">Medium</option>
@@ -65,7 +67,7 @@
 <br/>
   <button id="itemsubmit">Add New Task</button>
   <div id="itemlist"> 
-    <ul class = "dragitem"id="dragitem" draggable="true"> 
+    <ul> 
     </ul> 
   </div>
 </div>
@@ -79,19 +81,23 @@
 
 <!-- columns for kanbanboard -->
 <!-- added the drag class to the columns so that they are the parent of the child  -->
-          <div class = "box"  id ="card2"> 
-        <!-- makes the heading change text with the editable content phrase  -->
-            <h3 contentEditable="true"> To do </h3>      
+
+<div class = "box"  id ="card2"> 
+        <!-- makes the heading change text with the editable content phrase  -->   
+        <h3 contentEditable="true"> To do </h3>      
           </div>
+
           <div class = "box"  id ="card3"> 
           <h3 contentEditable="true"> In progress </h3>
           </div>
+
           <div class = "box"  id ="card4">
             <h3 contentEditable="true"> Finished </h3>
           </div>
-  </div>
-</div>
 
+
+</div>
+</div>
 
 
 <!-- end of kanban board -->

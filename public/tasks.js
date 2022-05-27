@@ -19,9 +19,18 @@ subButton.addEventListener("click", function() {
 
   // Start by getting the form values.
   let itemName = document.getElementById("itemname").value;
-        let taskDate = document.getElementById('taskdate').value;
+
+
+// creating an error if you do not enter the item name
+// form validation
   
-    taskDate = (new Date(taskDate)).toLocaleDateString('en-GB');
+  if(itemName == "") { document.getElementById("itemname").classList.add("error");
+    return;
+  }
+
+        let taskDate = document.getElementById('taskdate').value;
+        
+        taskDate = (new Date(taskDate)).toLocaleDateString('en-GB');
   
        let taskCompletion = document.getElementById('taskcompletion').value;
         let taskEstimate = document.getElementById('taskestimate').value;
@@ -92,15 +101,26 @@ function renderItems() {
     let itemLi = document.createElement('li');
 
     // makes the list be draggable
-  //    itemLi.setAttribute('draggable', 'true');
-  //  itemLi.setAttribute('ondragstart', 'drag(event)');
+     itemLi.setAttribute('draggable', 'true');
     
+// gave an ID to the li even though it does not differentiate it creates a demonstratable kanban board
+
+     itemLi.setAttribute('id', 'drag1');
+
+     
+
+
+     console.log(itemLi);
+  //  itemLi.setAttribute('ondragstart', 'drag(event)');
+  itemLi.addEventListener('dragstart', dragStart);
+
     // Now we could just set innerText or innerHTML to hold the item name, but if we want to have more than one variable displayed, this gets messy fast. Don't do this, it's poor practice and the code ends up clumsy and hard to maintain.
     // itemLi.innerHTML = "<strong>" + item.itemName + "</strong>";
 
     // Instead we create more elements to separate things using proper markup.
 
     // Create a span element to hold the name of the item.
+  
     let itemName = document.createElement('span');
     itemName.setAttribute('class', 'itemname'); // We can set classes so CSS can target it nicely later.
     itemName.innerText = item.itemName; // And we just put the text into this span, and nothing else.
@@ -134,7 +154,7 @@ function renderItems() {
 
       // And the custom removeItem function helps us to remove it from local storage.
       removeItem(item.itemName);
-            // removeItem(item.taskDate);
+
 
     });
 
@@ -173,17 +193,21 @@ function removeItem(itemName) {
 }
 
 
+
+
+
+// tutorial based off 
+
 // First, select the draggable element using the querySelector().
 // Second, attach a dragstart event handler to the draggable element.
 // Third, define the dragStart() function to handle the dragstart event.
 
 
 /* draggable element */
-const dragitem = document.querySelector('.dragitem');
-
-dragitem.addEventListener('dragstart', dragStart);
 
 function dragStart(e) {
+  console.log("dragStart");
+  console.log(e);
     e.dataTransfer.setData('text/plain', e.target.id);
     setTimeout(() => {
         e.target.classList.add('hide');
@@ -222,14 +246,10 @@ function drop(e) {
     // get the draggable element
     const id = e.dataTransfer.getData('text/plain');
     const draggable = document.getElementById(id);
-
+console.log(id);
     // add it to the drop target
     e.target.appendChild(draggable);
 
     // display the draggable element
     draggable.classList.remove('hide');
 }
-
-
-
-
