@@ -1,6 +1,12 @@
+
+//////////////////////////////////////// TASK LIST JAVSCRIPT ////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
 ////////////////////////////////////////
 // This code runs in global scope. It gets executed when the <script> tag in the HTML is loaded.
 ////////////////////////////////////////
+
+
 
 // Bind an event to the submit button to capture information from the form and store it into localStorage.
 let subButton = document.getElementById("itemsubmit");
@@ -86,8 +92,8 @@ function renderItems() {
     let itemLi = document.createElement('li');
 
     // makes the list be draggable
-     itemLi.setAttribute('draggable', 'true');
-   itemLi.setAttribute('ondragstart', 'drag(event)');
+  //    itemLi.setAttribute('draggable', 'true');
+  //  itemLi.setAttribute('ondragstart', 'drag(event)');
     
     // Now we could just set innerText or innerHTML to hold the item name, but if we want to have more than one variable displayed, this gets messy fast. Don't do this, it's poor practice and the code ends up clumsy and hard to maintain.
     // itemLi.innerHTML = "<strong>" + item.itemName + "</strong>";
@@ -112,7 +118,7 @@ function renderItems() {
     taskEstimate.setAttribute('class', 'taskestimate');
     taskEstimate.innerText = item.taskEstimate; 
 
-let taskPriority = document.createElement('span');
+    let taskPriority = document.createElement('span');
     taskPriority.setAttribute('class', 'taskPriority');
     taskPriority.innerText = item.taskPriority; 
  
@@ -133,11 +139,12 @@ let taskPriority = document.createElement('span');
     });
 
     // Add the name and remove button to the li
-itemLi.appendChild(itemName);
-itemLi.appendChild(taskDate);
-itemLi.appendChild(taskCompletion); 
+   itemLi.appendChild(itemName);
+   itemLi.appendChild(taskDate);
+    itemLi.appendChild(taskCompletion); 
     itemLi.appendChild(taskEstimate); 
-    itemLi.appendChild(taskPriority);  itemLi.appendChild(itemRemove);
+    itemLi.appendChild(taskPriority); 
+     itemLi.appendChild(itemRemove);
 
     // Add the li to the ul.
     itemUl.appendChild(itemLi);
@@ -166,21 +173,63 @@ function removeItem(itemName) {
 }
 
 
-// code for the drag and drop 
-
-   function drag(ev) {
-            ev.dataTransfer.setData("text", ev.target.id);
-        }
-
-        function allowDrop(ev) {
-            ev.preventDefault();
-        }
-
-  function drop(ev) {
-      ev.preventDefault();
-       var data = ev.dataTransfer.getData("text");
-        ev.target.appendChild(document.getElementById(data));
-        }
+// First, select the draggable element using the querySelector().
+// Second, attach a dragstart event handler to the draggable element.
+// Third, define the dragStart() function to handle the dragstart event.
 
 
-// creating new column with a button 
+/* draggable element */
+const dragitem = document.querySelector('.dragitem');
+
+dragitem.addEventListener('dragstart', dragStart);
+
+function dragStart(e) {
+    e.dataTransfer.setData('text/plain', e.target.id);
+    setTimeout(() => {
+        e.target.classList.add('hide');
+    }, 0);
+}
+
+
+/* drop targets */
+const boxes = document.querySelectorAll('.box');
+
+boxes.forEach(box => {
+    box.addEventListener('dragenter', dragEnter)
+    box.addEventListener('dragover', dragOver);
+    box.addEventListener('dragleave', dragLeave);
+    box.addEventListener('drop', drop);
+});
+
+
+function dragEnter(e) {
+    e.preventDefault();
+    e.target.classList.add('drag-over');
+}
+
+function dragOver(e) {
+    e.preventDefault();
+    e.target.classList.add('drag-over');
+}
+
+function dragLeave(e) {
+    e.target.classList.remove('drag-over');
+}
+
+function drop(e) {
+    e.target.classList.remove('drag-over');
+
+    // get the draggable element
+    const id = e.dataTransfer.getData('text/plain');
+    const draggable = document.getElementById(id);
+
+    // add it to the drop target
+    e.target.appendChild(draggable);
+
+    // display the draggable element
+    draggable.classList.remove('hide');
+}
+
+
+
+

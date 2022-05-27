@@ -1,9 +1,9 @@
-// style to add breaks within the task outcome
+/* // style to add breaks within the task outcome */
 .itemname, .taskdate, .taskcompletion, .taskestimate, .taskpriority, .itemsubmit{
   padding: 5px;
 }
 
-// styles the X of the button
+/* // styles the X of the button */
 .remove{
   background-color: red;
   color: white;
@@ -13,13 +13,13 @@
     margin: 5px;
 }
 
-// style to make sure that their is no bullet point
+/* // style to make sure that their is no bullet point */
 li{
   list-style: none;
   padding: 5px;
 }
 
-// style to the specific button to submit with
+/* // style to the specific button to submit with */
 #itemsubmit {
   margin: 1.5rem 0rem 0.1rem 0rem;
   background-color: white;
@@ -30,7 +30,7 @@ li{
   color: #426ACF;
 }
 
-// styling the way the forms are
+/* // styling the way the forms are */
 input, select{
   width: 100%;
   padding: 12px 20px;
@@ -41,12 +41,12 @@ input, select{
   box-sizing: border-box;
 }
 
-//styling the form to be flex
+/* //styling the form to be flex */
 .form-group{
   display: flex;
 }
 
-// styling to make the cards all in the same row
+/* // styling to make the cards all in the same row */
 .row{
     width: 100%;
     display: flex;
@@ -54,68 +54,63 @@ input, select{
     flex-wrap: wrap;
 }
 
-// style of the card which houses the task list which is why it is smaller 
-.card1{
-    text-align: center;
-    background-color: #426ACF;
-    position: relative;
+
+/* styles all of the cards to be the same */
+.box{
+      position: relative;
     flex: 1;
     max-width: 400px;
-    height: 580px;
+    width: 20%;
+    height: 800px;
     margin: 30px;
     padding: 20px;  
    color: #fff;
+   overflow: auto;
+      text-align: center;
 }
 
-// styles the specific heading of only card 1 to be white as it is contrast to the blue
-.card1 h3{
+/* // style of the card which houses the task list which is why it is smaller  */
+#card1{
+    background-color: #426ACF;
+}
+
+/* // styles the specific heading of only card 1 to be white as it is contrast to the blue */
+#card1 h3{
   color: #fff;
 }
 
-// styling of card 2 
-.card2{
-    text-align: center;
+/* // styling of card 2  */
+#card2{
     background-color: #FF6B6B;
-    position: relative;
-    flex: 1;
-    max-width: 400px;
-    height: 800px;
-    margin: 30px;
-    padding: 20px;
+
 }
-// styling of card 3
-.card3{
-    text-align: center;
+/* // styling of card 3 */
+#card3{
     background-color: #FFE66D;
-    position: relative;
-    flex: 1;
-    max-width: 400px;
-    height: 800px;
-    margin: 30px;
-    padding: 20px;
 }
 
-// styling of card 4
-.card4{
-    text-align: center;
+/* // styling of card 4 */
+#card4{
     background-color: #4ECDC4;
-    position: relative;
-    flex: 1;
-    max-width: 400px;
-    height: 800px;
-    margin: 30px;
-    padding: 20px;
 }
 
-// styling the outcome of the task list to have a white background to contrast the tasks
-#itemlist{
+/* // styling the outcome of the task list to have a white background to contrast the tasks */
+/* #itemlist {
   background-color: #fff;
   margin-top: 20px;
+  color: black;
+} */
+
+.dragitem{
+  background-color: #fff;
+  margin-top: 20px;
+  color: black;
+  // padding: 10px;
 }
 
-// making the cards responsive as they will go to a higher width once the page is decreased in size
+/* // making the cards responsive as they will go to a higher width once the page is decreased in size */
 @media screen and (max-width: 768px){
-  .card1, .card2, .card3, .card4{
+  #card1, #card2, #card3, #card4{
       width: 100%;
   
   }
