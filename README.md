@@ -92,23 +92,28 @@ Other problems i had included
 ## Refrences
 
 __W3Schools__
+
 W3 schools was a lifesaver, from checking refrences to seeing the examples they gave, I was always goiing back to W3 schools to help me work through the code.
 
 __Coding Tutorials__
+
 One of the best things i learnt from this assignment was all the different resources you have to allow for further education and inspiration from other peoples codes.
 
 __Stopwatch__
+
 Potts, T. (2021). Learn HTML, CSS & JavaScript by coding a Stopwatch | A beginner tutorial [YouTube Video]. Retrieved from https://www.youtube.com/watch?v=49f1cjZWRJA&ab_channel=TylerPotts
 
 * I took inspiration from this youtube video to help me understand the math functions involved in the stop watch and how to initially use the interval sections
 
 __Pomodoro__
+
 learn-webdev. (2020). Pomodoro Timer | Javascript Beginner Project Tutorial [YouTube Video]. Retrieved from https://www.youtube.com/watch?v=vAEG6OVCass&t=271s&ab_channel=learn-webdev
 
 * I took inspiration from the javascript of this code as well as the CSS grid layout that it used as it helped me come up with a perfect 3 column which was difficult to do by divs and without effecting the javascript
 
 
 __Acronym Generator__
+
 (Byron Delpinal, 2022)
 Hays, M. (2020). P047 day47 acronym generator worked out [YouTube Video]. Retrieved from https://www.youtube.com/watch?v=sqNWOHXEKho&t=89s&ab_channel=Mr.Hays
 
@@ -116,11 +121,13 @@ Hays, M. (2020). P047 day47 acronym generator worked out [YouTube Video]. Retrie
 
 
 __Colour Generator__
+
 How To Generate a Random Color in JavaScript | CSS-Tricks. (2009, December 10). Retrieved May 23, 2022, from CSS-Tricks website: https://css-tricks.com/snippets/javascript/random-hex-color/
 
 ‌ * I followed along this code to understand how to use the add event listener to the div without changing the colour of the background which took me a little  bit of time to work out
 
 __Drag and Drop__
+
 An Essential Guide to JavaScript Drag and Drop By Examples. (2022, January 8). Retrieved May 27, 2022, from JavaScript Tutorial website: https://www.javascripttutorial.net/web-apis/javascript-drag-and-drop/#:~:text=Introduction%20to%20JavaScript%20Drag%20and%20Drop%20API&text=To%20drag%20an%20image%2C%20you,you%20would%20drag%20an%20image
 
 * I used this tutorial to help guide me with how to do the drop function of the javascript, as i was able to drag the funciton but dropping became an issue
