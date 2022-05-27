@@ -11,7 +11,7 @@ I found this assignment to be very enjoyable and a fun challenge. It was a lot m
     Profile page:
 
     (img/designedProfilePage.png)
-    ![Image of profile page](/Users/zoejanssen/studbud/img/designedProfilePage.png)
+    ![Image of profile page](img/designedProfilePage.png)
 
     * And the coded Profile Page: 
 
