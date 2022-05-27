@@ -9,6 +9,7 @@ I found this assignment to be very enjoyable and a fun challenge. It was a lot m
  * __Removed the Profile Page__
     * I did actually code this page but at the end of the day i realised it did not add anything to the design and hence was deemed unnecessary. You can see below the inital designed 
     Profile page:
+    
     ![Image of profile page](img/designedProfilePage.png)
 
     * And the coded Profile Page: 
@@ -23,10 +24,13 @@ I found this assignment to be very enjoyable and a fun challenge. It was a lot m
      * I also changed the features around and utilised a colour generator, acronym generator, background colour changer, stop watch, pomodoro and music player
      * I constantly was re-designing this page to allow for more efficent type spent coding in stead of wasting time with thinking how it would be layout
      * Original Mockup
+
      ![Image of original mockup](img/originalWorkspace.png)
     * Re-Designed Mockup
+
       ![Image of edited workspace](img/editedWorkspace.png)
     * Final Version
+
      ![Image of final workspace](img/finalVersionWorkspace.png)
 
 * __Resource List__
@@ -37,9 +41,11 @@ I found this assignment to be very enjoyable and a fun challenge. It was a lot m
     * I re designed this page to include the task list itself and form to make it easier for the user to access the Kanban Board 
     * I made the descision to not include an adding of a column as the origianl Kanban board is suppose to be in three columns as it makes for a more structured output for tasks 
     * Original Mockup
+
       ![Image of orginal kanban](img/orignalKanban.png)
+
     * Final Version
-     ![Image of final workspace](img/finalTask.png)
+     ![Image of final kanban](img/kanbanBoard.png)
 
 ## Requirements
 
