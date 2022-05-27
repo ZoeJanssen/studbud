@@ -4,8 +4,10 @@ __Assignment Overview__
 
 I found this assignment to be very enjoyable and a fun challenge. It was a lot more difficult to use github than repplit at the start, espically as i didn't clear my cache, so was confused and kept changing my nav bar as i was unable to see an outcome from my changes. I feel a lot more confident with coding, and feel like i have a greater understanding overall of all three languages but particularly the use of javascript in Web design. It is a bit of challenge when you can't find the missing semicolons but in the end it all went okay. 
 
-## development documentation
- __Changes__ There were various changes that came about from my inital mockups, particularly as i can design a great website but can not always code it. Although i did change a lot up, it was generally a cosmetic change and did not effect the user experience. 
+## Design development documentation
+ __Changes__
+ 
+  There were various changes that came about from my inital mockups, particularly as i can design a great website but can not always code it. Although i did change a lot up, it was generally a cosmetic change and did not effect the user experience. 
  * __Removed the Profile Page__
     * I did actually code this page but at the end of the day i realised it did not add anything to the design and hence was deemed unnecessary. You can see below the inital designed 
     Profile page:
@@ -62,6 +64,7 @@ I used the following features which were required for the code
 
 * Kanban Board (found within the Kanban board, Task Page)
     * instead of creating and naming columns i have made the design decision to only allow the user to re name the column as with too much freedom, the user, especially a creative student, will be caught up in the adding and removing of columns, Hence only re-naming it is able to give personal features without distraction
+
 * Pomodoro Timer (found within the Workspace Page)
 * Acronym Maker (found within the Workspace Page)
 
@@ -81,6 +84,12 @@ Local storage nearly drove me insane, it was increasingly difficult as i over co
 __Javascript Names__
 
 I had challenges when i would accidentally name the code the same name, this was a particular problem with the pomodoro and stopwatch as i used almost the same names for all the objects
+
+__Drag and Drop__
+
+The drag and drop function was very challenging, yet when i was able to get it functioning i was very excited. I would have liked this element to be more functional but nonetheless am happy about it.
+
+
 
 __Various Problems__
 Other problems i had included 
@@ -124,7 +133,7 @@ __Colour Generator__
 
 How To Generate a Random Color in JavaScript | CSS-Tricks. (2009, December 10). Retrieved May 23, 2022, from CSS-Tricks website: https://css-tricks.com/snippets/javascript/random-hex-color/
 
-‌ * I followed along this code to understand how to use the add event listener to the div without changing the colour of the background which took me a little  bit of time to work out
+* I followed along this code to understand how to use the add event listener to the div without changing the colour of the background which took me a little  bit of time to work out
 
 __Drag and Drop__
 
