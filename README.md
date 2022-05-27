@@ -9,7 +9,7 @@ I found this assignment to be very enjoyable and a fun challenge. It was a lot m
  * __Removed the Profile Page__
     * I did actually code this page but at the end of the day i realised it did not add anything to the design and hence was deemed unnecessary. You can see below the inital designed 
     Profile page:
-    
+
     ![Image of profile page](img/designedProfilePage.png)
 
     * And the coded Profile Page: 
@@ -42,7 +42,7 @@ I found this assignment to be very enjoyable and a fun challenge. It was a lot m
     * I made the descision to not include an adding of a column as the origianl Kanban board is suppose to be in three columns as it makes for a more structured output for tasks 
     * Original Mockup
 
-      ![Image of orginal kanban](img/orignalKanban.png)
+      ![Image of orginal kanban](img/originalKanban.png)
 
     * Final Version
      ![Image of final kanban](img/kanbanBoard.png)
