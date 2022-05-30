@@ -42,6 +42,7 @@ I found this assignment to be very enjoyable and a fun challenge. It was a lot m
 * __Task Page__
     * I re designed this page to include the task list itself and form to make it easier for the user to access the Kanban Board 
     * I made the descision to not include an adding of a column as the origianl Kanban board is suppose to be in three columns as it makes for a more structured output for tasks 
+    * I also made the descision to let students be able to edit the column names to ensure an aspect of personalisation instead of adding new columns to over complicate a students tasks. As it is better for work to be structured based on my research (Stirling, 2016).
     * Original Mockup
 
       ![Image of orginal kanban](img/originalKanban.png)
