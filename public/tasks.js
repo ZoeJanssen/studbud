@@ -111,7 +111,6 @@ function renderItems() {
 
 
      console.log(itemLi);
-  //  itemLi.setAttribute('ondragstart', 'drag(event)');
   itemLi.addEventListener('dragstart', dragStart);
 
     // Now we could just set innerText or innerHTML to hold the item name, but if we want to have more than one variable displayed, this gets messy fast. Don't do this, it's poor practice and the code ends up clumsy and hard to maintain.
@@ -180,7 +179,6 @@ function removeItem(itemName) {
   // This helps us to find the array index for the item that we want to remove. It compares the information we pass in (via the itemName variable) to the information in the objects within the array. If it matches, we get a number back - i.e. items[3].
   let itemIndex = items.findIndex(function(item) {
     return item.itemName == itemName;
-        // return item.taskDate == taskDate;
 
   });
 
